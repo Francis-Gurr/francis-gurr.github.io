@@ -36,7 +36,10 @@
       background-color: #2f2f2f; /* Black Gray */
       color: #fff;
   }
-  .container-top{
+  .container-fluid{
+    padding:50px 100px;
+  }
+  .container-fluid{
     padding:25px 50px;
   }
   .navbar {
@@ -50,10 +53,8 @@
   .navbar-nav  li a:hover {
       color: #1abc9c !important;
   }
-  .col-profile {
-    max-width: 300px;
-    margin-top: 25px;
-    margin-right: 100px;
+  .img-profile{
+    max-width: 300px
   }
   </style>
 </head>
@@ -61,7 +62,7 @@
 
 <!-- Navbar -->
 <nav class="navbar navbar-default">
-  <div class="container-fluid">
+  <div class="container-navbar">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
         <span class="icon-bar"></span>
@@ -83,8 +84,8 @@
 <!-- Top Container -->
 <div class="container-fluid container-top bg-4">
   <div class="row">
-    <div class="col-sm-12 col-md-4 col-profile">
-      <img src="img/Michaelmas_Ball.png" class="img-responsive img-thumbnail" style="display:inline" alt="Profile">
+    <div class="col-sm-12 col-md-4">
+      <img src="img/Michaelmas_Ball.png" class="img-responsive img-thumbnail img-profile" style="display:inline" alt="Profile">
       <h5>Email: f.b.gurr@durham.ac.uk</h5>
       <h5>LinkedIn: <a href="https://uk.linkedin.com/in/francis-gurr"><i class="fa fa-linkedin-square" style="font-size:24px"></i></a></h5>
     </div>
