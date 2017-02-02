@@ -55,6 +55,66 @@
   .img-profile{
     max-width: 300px
   }
+
+  /* Modal (background) */
+  .modal {
+      display: none; /* Hidden by default */
+      position: fixed; /* Stay in place */
+      padding-top: 100px; /* Location of the box */
+      padding-bottom: 100px;
+      left: 0;
+      top: 0;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      overflow: auto; /* Enable scroll if needed */
+      background-color: rgb(0,0,0); /* Fallback color */
+      background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  }
+  /* Modal content */
+  .modal-content {
+      margin: auto;
+      display: block;
+      width: 80%;
+      max-width: 700px;
+  }
+  /* Modal animation */
+  .modal-content {
+      -webkit-animation-name: zoom;
+      -webkit-animation-duration: 0.6s;
+      animation-name: zoom;
+      animation-duration: 0.6s;
+  }
+  @-webkit-keyframes zoom {
+      from {-webkit-transform:scale(0)}
+      to {-webkit-transform:scale(1)}
+  }
+  @keyframes zoom {
+      from {transform:scale(0)}
+      to {transform:scale(1)}
+  }
+  /* Close button for modal */
+  .close {
+      position: absolute;
+      top: 15px;
+      right: 35px;
+      color: #f1f1f1;
+      font-size: 40px;
+      font-weight: bold;
+      transition: 0.3s;
+  }
+  .close:hover,
+  .close:focus {
+      color: #fff;
+      text-decoration: none;
+      cursor: pointer;
+  }
+  /* Modal image 100% width for small screens */
+  @media only screen and (max-width: 700px){
+      .modal-content {
+          width: 100%;
+      }
+  }
+
   </style>
 </head>
 <body>
@@ -142,6 +202,7 @@
     <h4>Work Placement</h4>
     <p>In this role I gained insight into the inner workings of a company through my experience working in a whole variety of different departments. Not only did I have to be very adaptable and able to engage in a variety of different team based environments, I also learned many practical skills.</p>
     <p>In the Sales department I gained experience processing quotes and orders. In the Manufacturing Workshop I learnt to use CNC machines. In the Engineering department I developed my Solidworks and CAD skills to create detailed drawings and assemblies.</p>
+    <p><a data-toggle="modal" href="#myModal">Reference</a></p>
   </div>
 </div>
 
@@ -185,6 +246,19 @@
 <footer class="container-fluid bg-4 text-center">
   <h4>Francis Gurr <span>&bull;</span> f.b.gurr@durham.ac.uk <span>&bull;</span> <a href="https://uk.linkedin.com/in/francis-gurr"><i class="fa fa-linkedin-square" style="font-size:24px"></i></a><h4>
 </footer>
+
+<!-- BiS Reference Modal -->
+<div id="myModal" class="modal" role="dialog">
+  <span class="close" data-dismiss="modal">&times;</span>
+  <img src="img/BiSValves.png" class="modal-content">
+</div>
+
+<script>
+  $(document).ready(function(){
+          $("#myModal").modal();
+      });
+  });
+</script>
 
 </body>
 </html>
