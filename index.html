@@ -64,7 +64,8 @@
     max-width: 300px;
   }
   .hr-2{
-    display: inline-flex;
+    opacity: 0.25;
+    display: none;
   }
   /* Modal (background) */
   .modal {
@@ -119,9 +120,12 @@
       cursor: pointer;
   }
   /* Modal image 100% width for small screens */
-  @media only screen and (max-width: 700px){
+  @media only screen and (max-width: 767px){
       .modal-content {
           width: 100%;
+      }
+      .hr-2{
+        display: block;
       }
   }
   /* Adjust format for small (mobile) screens */
@@ -133,9 +137,6 @@
       .img-profile{
         margin-top: 15px;
         width: auto;
-      }
-      .hr-2{
-        opacity: 0.25;
       }
   }
 
