@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <style>
@@ -100,7 +100,7 @@
       from {transform:scale(0)}
       to {transform:scale(1)}
   }
-  /* Close button for modal */
+  /* Close button (modal) */
   .close {
       position: absolute;
       top: 15px;
@@ -161,7 +161,7 @@
   </div>
 </nav>
 
-<!-- Top Container -->
+<!-- About Container -->
 <div class="container-fluid bg-1" id="about">
     <div class="col-sm-6 col-md-6 col-lg-4">
       <img src="img/Michaelmas_Ball.png" class="img-responsive img-thumbnail img-profile" style="display:inline" alt="Profile">
@@ -172,7 +172,7 @@
     </div>
 </div>
 
-<!-- Experience Container (Grid) -->
+<!-- Experience Container -->
 <div class="container-fluid bg-3" id="experience">
   <h2 class="text-center">EXPERIENCE<h2>
   <div class="col-sm-4">
@@ -250,7 +250,7 @@
   </div>
 </div>
 
-<!-- Education Container (Grid) -->
+<!-- Education Container -->
 <div class="container-fluid bg-1" id="education">
   <h2 class="text-center">EDUCATION<h2>
   <div class="col-sm-6">
@@ -285,7 +285,7 @@
   </div>
 </div>
 
-<!-- Footer -->
+<!-- Footer (Contact)-->
 <footer id="contact">
   <h2>CONTACT<h2>
     <p style="font-size:20px;"><i class="fa fa-envelope"></i> f.b.gurr@durham.ac.uk
@@ -294,12 +294,13 @@
   </p>
 </footer>
 
-<!-- BiS Reference Modal -->
+<!-- Modal (BiS Reference) -->
 <div id="myModal" class="modal" role="dialog">
   <span class="close" data-dismiss="modal">&times;</span>
   <img src="img/BiSValves.png" class="modal-content">
 </div>
 
+<!-- JS -->
 <script>
   $(document).ready(function(){
           $("#myModal").modal();
