@@ -16,13 +16,29 @@
       color: #f5f6f7;
   }
   p {font-size: 16px;}
-  footer {
-    padding-top: 10px;
+  p a:hover,
+  p a:focus{
+    text-decoration: underline;
+  }
+  footer,
+  footer p {
+    padding: 10px 0 5px;
     background-color: #f8f8f8;
     color: #777777;
+    font-size: 20px;
+    letter-spacing: 5px;
+    text-align: center;
   }
-  footer a:hover{
+  footer a {
+    color: #777777;
+    font-size: 24px;
+  }
+  footer a:hover,
+  footer a:focus {
     color: #555555;
+  }
+  .footer-br {
+    display: none;
   }
   .margin {margin-bottom: 25px;}
   .bg-1 {
@@ -109,24 +125,41 @@
       text-decoration: none;
       cursor: pointer;
   }
-  /* Modal image 100% width for small screens */
-  @media only screen and (max-width: 767px){
+  /* Adjust format for medium (tablet) screens */
+  @media screen and (max-width: 768px){
       .modal-content {
           width: 100%;
       }
-      .hr-2{
+      .container-fluid {
+        padding: 25px 50px;
+      }
+  }
+  @media screen and (max-width: 767px){
+      .hr-2 {
         display: block;
       }
   }
+
   /* Adjust format for small (mobile) screens */
-  @media (max-width: 480px) {
-      .container-fluid{
+  @media screen and (max-width: 480px) {
+      p {font-size: 13px;}
+      footer,
+      footer p,
+      footer a {
+        font-size: 16px;
+      }
+      .container-fluid {
         padding: 0;
       }
-      p {font-size: 13px;}
-      .img-profile{
+      .img-profile {
         margin-top: 15px;
         width: auto;
+      }
+      .footer-bull {
+        display: none;
+      }
+      .footer-br {
+        display: inherit;
       }
   }
 
@@ -144,8 +177,6 @@
         <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand" href="#about">Francis Gurr</a>
-      <a class="navbar-brand" href="https://uk.linkedin.com/in/francis-gurr"><i class="fa fa-linkedin-square"></i></a>
-      <a class="navbar-brand" href="https://github.com/Francis-Gurr"><i class="fa fa-github"></i></a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
@@ -283,12 +314,12 @@
 </div>
 
 <!-- Footer (Contact)-->
-<footer class="text-center" id="contact">
-  <p style="font-size:20px; letter-spacing:5px; line-height:1;"><i class="fa fa-envelope" style="font-size:24px;"></i> f.b.gurr@durham.ac.uk
-    <span>&bull;</span>
-    <a href="https://uk.linkedin.com/in/francis-gurr"><i class="fa fa-linkedin-square" style="color:#777777; font-size:24px;"></i></a>
-    <a href="https://github.com/Francis-Gurr"><i class="fa fa-github" style="color:#777777; font-size:24px;"></i></a>
-  </p>
+<footer id="contact">
+  <a href="mailto:f.b.gurr@durham.ac.uk?"><i class="fa fa-envelope"></i> f.b.gurr@durham.ac.uk</a>
+  <span class="footer-bull">&bull;</span>
+  <br class="footer-br">
+  <a href="https://uk.linkedin.com/in/francis-gurr"><i class="fa fa-linkedin-square"></i></a>
+  <a href="https://github.com/Francis-Gurr"><i class="fa fa-github"></i></a>
 </footer>
 
 <!-- Modal (BiS Reference) -->
