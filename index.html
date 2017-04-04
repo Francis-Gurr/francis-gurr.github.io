@@ -66,6 +66,7 @@
   .navbar-nav  li a:hover {
       color: #1abc9c !important;
   }
+  /* Portfolio */
   .img-profile{
     margin-top: 15px;
     max-width: 300px;
@@ -78,7 +79,9 @@
     border: 1px solid #555555;
   }
   .portfolio img {
+    display: block;
     width: 100%;
+    height: auto;
   }
   * {
     box-sizing: border-box;
@@ -88,10 +91,38 @@
     text-align: center;
     font-size: 14px;
   }
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: hsl(240, 50%, 10%);
+  }
+  .portfolio:hover .overlay {
+    opacity: 1;
+  }
+  .overlay-text {
+    color: white;
+    opacity: 1;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+  }
+
+  /* Dividing line */
   .hr-2{
     opacity: 0.25;
     display: none;
   }
+
   /* Modal (background) */
   .modal {
       display: none; /* Hidden by default */
@@ -224,30 +255,39 @@
 
 <!-- Portfolio Container -->
 <div class="container-fluid bg-2" id="portfolio">
-  <h2 class="text-center">PORTFOLIO</h2>
+  <h2 class="text-center margin">PORTFOLIO</h2>
   <div class="row">
     <div class="col-sm-6 col-md-3">
       <div class="portfolio">
         <a href="https://github.com/Francis-Gurr/HEX-Game">
-          <img src="img/Hex_Game.png" class="img-responsive" alt="Francis Gurr - Hex Game">
-          <div class="caption">HEX GAME</div>
+          <img src="img/Hex.png" class="img-responsive" alt="Francis Gurr - Hex Game">
+          <div class="overlay">
+            <div class="overlay-text">HEX GAME</div>
+          </div>
         </a>
+        <div class="caption">HEX GAME</div>
       </div>
     </div>
     <div class="col-sm-6 col-md-3">
       <div class="portfolio">
         <a href="www.francisgurr.com/Diceware/diceware.html">
           <img src="img/Dice.png" class="img-responsive"alt="Francis Gurr - Diceware">
-          <div class="caption">DICEWARE</div>
+          <div class="overlay">
+            <div class="overlay-text">DICEWARE</div>
+          </div>
         </a>
+          <div class="caption">DICEWARE</div>
       </div>
     </div>
     <div class="col-sm-6 col-md-3">
       <div class="portfolio">
         <a href="#">
-          <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" alt="Image">
-          <div class="caption">MINESWEEPER</div>
+          <img src="img/Minesweeper.png" class="img-responsive" alt="Image">
+          <div class="overlay">
+            <div class="overlay-text">MINESWEEPER</div>
+          </div>
         </a>
+          <div class="caption">MINESWEEPER</div>
       </div>
     </div>
     <div class="col-sm-6 col-md-3">
