@@ -18,52 +18,14 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <link rel="stylesheet" href="main.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <style>
-  body {
-      font: 20px Montserrat, sans-serif;
-      line-height: 1.8;
-  }
-  p {font-size: 16px;}
-  a {
-    color: #6699ff; /* Lighter blue */
-  }
-  a:hover,
-  a:focus {
-    color: #3377ff; /* Darker blue */
-    text-decoration: underline;
-  }
-  .bg-1 {
-    background-color: #0d0d26; /* Navy */
-    color: #ffffff; /* White */
-  }
-  .bg-2 {
-    background-color: #ffffff; /* White */
-    color: #555555;
-  }
-  .container-fluid{
-    padding: 50px 100px;
-    height: auto;
-    width: auto;
-  }
-  /* Navbar */
-  .navbar {
-    border: 0;
-    border-radius: 0;
-    font-size: 12px;
-    letter-spacing: 5px;
-    margin-bottom: 0;
-    padding: 0px 25px;
-  }
-  .navbar-nav  li a:hover {
-      color: #1abc9c !important;
-  }
-  .img-profile{
+  #img-profile{
     margin-top: 15px;
     max-width: 300px;
   }
-  .margin {margin-bottom: 25px;}
   /* Portfolio Section */
   .portfolio {
     background-color: #ffffff; /* White */
@@ -110,30 +72,9 @@
     -ms-transform: translate(-50%, -50%);
   }
   /* Dividing Line */
-  .hr-2 {
+  #hr-2 {
   display: none;
     opacity: 0.25;
-  }
-  /* Footer */
-  footer,
-  footer p {
-    background-color: #f8f8f8; /* Off White */
-    color: #777777; /* Grey */
-    font-size: 20px;
-    letter-spacing: 5px;
-    padding: 10px 0 5px;
-    text-align: center;
-  }
-  footer a {
-    color: #777777; /*Grey */
-    font-size: 24px;
-  }
-  footer a:focus,
-  footer a:hover {
-    color: #555555; /* Dark Grey */
-  }
-  .footer-br {
-    display: none;
   }
   /* Modal */
   .modal {
@@ -187,42 +128,23 @@
     cursor: pointer;
     text-decoration: none;
   }
-
   /* Adjust format for medium (tablet) screens */
   @media screen and (max-width: 768px){
-    .container-fluid {
-      padding: 25px 50px;
-    }
     .modal-content {
       width: 100%;
     }
   }
   @media screen and (max-width: 767px){
-    .hr-2 {
+    #hr-2 {
       display: block;
     }
   }
 
   /* Adjust format for small (mobile) screens */
   @media screen and (max-width: 480px) {
-      p {font-size: 13px;}
-      .container-fluid {
-        padding: 0;
-      }
-      .img-profile {
+      #img-profile {
         margin-top: 15px;
         width: auto;
-      }
-      footer,
-      footer p,
-      footer a {
-        font-size: 16px;
-      }
-      .footer-bull {
-        display: none;
-      }
-      .footer-br {
-        display: inherit;
       }
   }
   </style>
@@ -254,7 +176,7 @@
 <!-- About Container -->
 <div class="container-fluid bg-1" id="about">
     <div class="col-sm-6 col-md-6 col-lg-4">
-      <img src="img/Profile.jpg" class="img-responsive img-thumbnail img-profile" style="display:inline" alt="Francis Gurr - Profile Image">
+      <img src="img/Profile.jpg" class="img-responsive img-thumbnail" id="img-profile" style="display:inline" alt="Francis Gurr - Profile Image">
     </div>
     <div class="col-sm-6 col-md-6 col-lg-8">
       <h2 class="margin">FRANCIS GURR</h2>
@@ -442,7 +364,7 @@
       <br>Website Manager for the Bureaucracy Society
       <br>Attend Computer Science Society Hackathons</p>
   </div>
-  <hr class="hr-2">
+  <hr id="hr-2">
   <div class="col-sm-6">
     <h4><i class="fa fa-calendar"></i> 2007 - 2014</h4>
     <h4>Bournemouth Grammar School</h4>
