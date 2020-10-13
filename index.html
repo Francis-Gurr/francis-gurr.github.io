@@ -4,7 +4,7 @@
   <title>Francis Gurr</title>
   <meta charset="utf-8">
   <meta name="description" content="Francis Gurr - Personal Website">
-  <meta name="keywords" content="Francis, Gurr, f.b.gurr@durham.ac.uk">
+  <meta name="keywords" content="Francis, Gurr, francis.gurr@gmail.com">
   <meta name="author" content="Francis Gurr">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta property="og:site_name" content="Francis Gurr">
@@ -15,395 +15,233 @@
   <meta property="og:locale" content="en_GB">
   <meta property="og:image" content="http://francisgurr.com/img/Profile.jpg">
   <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro">
   <link rel="stylesheet" href="main.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <style>
-  #img-profile{
-    margin-top: 15px;
-    max-width: 300px;
-  }
-  /* Portfolio Section */
-  .portfolio {
-    background-color: #ffffff; /* White */
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    margin: 10px auto 25px auto;
-    position: relative;
-    width: 80%;
-  }
-  .portfolio img {
-    display: block;
-    height: auto;
-    width: 100%;
-  }
-  .caption {
-    text-align: center;
-    padding: 10px 20px;
-    font-size: 14px;
-  }
-  /* Portfolio Overlay */
-  .overlay{
-    background-color: hsl(240, 50%, 10%); /* Navy */
-    opacity: 0;
-    position: absolute;
-    transition: .5s ease;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-  }
-  .portfolio:hover .overlay {
-    opacity: 1;
-  }
-  .overlay-text {
-    color: #ffffff; /* White */
-    font-size: 20px;
-    opacity: 1;
-    position: absolute;
-    text-align: center;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-  }
-  /* Dividing Line */
-  #hr-2 {
-  display: none;
-    opacity: 0.25;
-  }
-  /* Modal */
-  .modal {
-    background-color: rgb(0,0,0); /* Black */
-    background-color: rgba(0,0,0,0.9); /* Black with opacity */
-    display: none;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    padding-top: 100px;
-    padding-bottom: 100px;
-    position: fixed;
-  }
-  /* Modal Content */
-  .modal-content {
-    display: block;
-    margin: auto;
-    max-width: 700px;
-    width: 80%;
-  }
-  /* Modal Animation */
-  .modal-content {
-    animation-name: zoom;
-    animation-duration: 0.6s;
-    -webkit-animation-name: zoom;
-    -webkit-animation-duration: 0.6s;
-  }
-  @-webkit-keyframes zoom {
-    from {-webkit-transform:scale(0)}
-    to {-webkit-transform:scale(1)}
-  }
-  @keyframes zoom {
-    from {transform:scale(0)}
-    to {transform:scale(1)}
-  }
-  /* Modal Close Button */
-  .close {
-    color: #f1f1f1;
-    font-size: 40px;
-    font-weight: bold;
-    position: absolute;
-    top: 15px;
-    right: 35px;
-    transition: 0.3s;
-  }
-  .close:focus,
-  .close:hover {
-    color: #ffffff; /* White */
-    cursor: pointer;
-    text-decoration: none;
-  }
-  /* Adjust format for medium (tablet) screens */
-  @media screen and (max-width: 768px){
-    .modal-content {
-      width: 100%;
-    }
-  }
-  @media screen and (max-width: 767px){
-    #hr-2 {
-      display: block;
-    }
-  }
-
-  /* Adjust format for small (mobile) screens */
-  @media screen and (max-width: 480px) {
-      #img-profile {
-        margin-top: 15px;
-        width: auto;
-      }
-  }
-  </style>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 </head>
+
+<!-- BODY -->
 <body>
+  <div class="container-fluid">
+    <!-- Dark-mode Button -->
+    <div class="row justify-content-end">
+      <button type="button" class="darken btn btn-lg"><i class="fa fa-moon-o"></i></button>
+    </div>
+    <div class="row">
+      <div class="col-sm-1"></div>
 
-<!-- Navbar -->
-<nav class="navbar navbar-default">
-  <div class="container-navbar">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#about">Francis Gurr</a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#portfolio">PORTFOLIO</a></li>
-        <li><a href="#experience">EXPERIENCE</a></li>
-        <li><a href="#education">EDUCATION</a></li>
-        <li><a href="#contact">CONTACT</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-<!-- About Container -->
-<div class="container-fluid bg-1" id="about">
-    <div class="col-sm-6 col-md-6 col-lg-4">
-      <img src="img/Profile.jpg" class="img-responsive img-thumbnail" id="img-profile" style="display:inline" alt="Francis Gurr - Profile Image">
-    </div>
-    <div class="col-sm-6 col-md-6 col-lg-8">
-      <h2 class="margin">FRANCIS GURR</h2>
-      <p>I am a second year General Engineering undergraduate student at Durham University with a special interest in Computer Science based projects. I am hoping to specialise in Electronic Engineering next year with the goal of achieving a career in IT.
-        During my first year, I scored 97% in my final Computer Science submission which can be found <a href="https://github.com/Francis-Gurr/HEX-Game">here</a>.
-        I am fluent in Java, C, MatLab and Python. I also have experience using HTML and CSS.
-        At university, I enjoy attending the Hackathons organised by the Durham University Computer Science Society.
-        I am president of the Durham University’s Harry Potter Society, which involves coordinating and organising large scale events such as the annual Yule Ball which has a budget of around £3000.
-        In addition to this, I am president and founder of the Durham University Circus Society.
-        Furthermore, I am bilingual in both English and German.</p>
-    </div>
-</div>
-
-<!-- Portfolio Container -->
-<div class="container-fluid bg-2" id="portfolio">
-  <h2 class="text-center margin">PORTFOLIO</h2>
-  <div class="row">
-    <div class="col-sm-6 col-md-3">
-      <div class="portfolio">
-        <a href="https://github.com/Francis-Gurr/HEX-Game">
-          <img src="img/Hex.png" class="img-responsive" alt="Francis Gurr - Hex Game">
-          <div class="overlay">
-            <div class="overlay-text">HEX GAME</div>
-          </div>
-        </a>
-        <div class="caption">HEX GAME</div>
+      <!-- START: Sidebar -->
+      <div class="col-sm-2">
+        <div class="card sticky-top sidebar shadow">
+          <h2>Francis Gurr</h2>
+          <img class="img-fluid rounded-circle profile" src="img/Profile.jpg" id="img-profile" alt="Francis Gurr - Profile Image">
+          <p>Recent Electronic Engineering (MEng) graduate from  Durham University.
+            My main interests lie in software development and machine learning.</p>
+            <!-- Contact Links -->
+          <ul class="contact">
+            <li><a href="mailto:francisgurr@gmail.com">
+              <i class="fa fa-envelope"></i>
+            </a></li>
+            <li><a href="https://www.linkedin.com/in/francis-gurr/">
+              <i class="fa fa-linkedin"></i>
+            </a></li>
+            <li><a href="https://github.com/Francis-Gurr">
+              <i class="fa fa-github"></i>
+            </a></li>
+          </ul>
+        </div>
       </div>
-    </div>
-    <div class="col-sm-6 col-md-3">
-      <div class="portfolio">
-        <a href="http://www.francisgurr.com/Diceware/diceware.html">
-          <img src="img/Dice.png" class="img-responsive"alt="Francis Gurr - Diceware">
-          <div class="overlay">
-            <div class="overlay-text">DICEWARE</div>
+      <!-- END: Sidebar -->
+
+      <!-- START: Portfolio -->
+      <div class="col-sm-8">
+
+        <!-- START: Masters Project -->
+        <div class="card mb-3 portfolio">
+          <div class="row no-gutters">
+            <!-- START: Portfolio Body -->
+            <div class="col-sm-8">
+              <div class="d-flex flex-column h-100">
+                <div class="card-body">
+                <!-- Portfolio Title -->
+                <h4 class="card-title">Masters Project</h4>
+                <!-- Portfolio Description -->
+                <p class="card-text">Project proposed using road-side video cameras as a non-intrusive alternative to current ITS and infomobility systems.
+                  Video images were used to determine the speed of vehicles.
+                  The project proved successful and was able to provide vehicle speeds in real-time from road-side camera footage.
+                  <br><em>Project was supported by Q-Free ASA.</em></p>
+                </div>
+                <!-- Portfolio Footer -->
+                <div class="card-body flex-grow-0">
+                  <div class="d-flex">
+                    <!-- Portfolio Date -->
+                    <div class="mr-auto">
+                      <p class="card-text"><small class="text-muted">May 2020</small></p>
+                    </div>
+                    <!-- Portfolio Tags -->
+                    <div>
+                      <span class="tag badge mr-2">Machine Learning</span>
+                      <span class="tag badge mr-2">CNNs</span>
+                      <span class="tag badge mr-2">YOLOv3</span>
+                      <span class="tag badge mr-2">Python</span>
+                      <span class="tag badge mr-2">C++</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- END: Portfolio Body -->
+            <!-- Portfolio Image -->
+            <div class="col-sm-4">
+              <img src="img/masters_project.jpg" class="card-img img-fluid" alt="Francis Gurr Portfolio - Masters Project Image">
+            </div>
           </div>
-        </a>
-          <div class="caption">DICEWARE</div>
-      </div>
-    </div>
-    <div class="col-sm-6 col-md-3">
-      <div class="portfolio">
-        <a href="https://github.com/Francis-Gurr/Sudoku-Solver">
-          <img src="img/Sudoku_Solver.png" class="img-responsive" alt="Francis Gurr - Sudoku Solver">
-          <div class="overlay">
-            <div class="overlay-text">SUDOKU SOLVER</div>
+          <!-- Portfolio: Link -->
+          <a href="#" class="stretched-link"></a>
+        </div>
+        <!-- END: Masters Project -->
+
+        <!-- START: Q-Free Internship -->
+        <div class="card mb-3 portfolio">
+          <div class="row no-gutters">
+            <!-- Portfolio Image -->
+            <div class="col-sm-4 order-1 order-md-0">
+              <img src="img/qfree-internship.jpg" class="card-img img-fluid" alt="Francis Gurr Portfolio - Q-Free Internship Image">
+            </div>
+            <!-- START: Portfolio Body -->
+            <div class="col-sm-8 order-0 order-md-1">
+              <div class="d-flex flex-column h-100">
+                <div class="card-body">
+                <!-- Portfolio Title -->
+                <h4 class="card-title">Q-Free Internship</h4>
+                <!-- Portfolio Description -->
+                <p class="card-text">The continuation of a successful third year design project.
+                  Designed and developed a prototype non-intrusive roadside detection system for counting and classifing vehicles.
+                  Innovative design using LiDAR and radar.
+                  Developed custom sofware to generate 2D side profiles of vehicles using LiDAR data.</em></p>
+                </div>
+                <!-- Portfolio Footer -->
+                <div class="card-body flex-grow-0">
+                  <div class="d-flex">
+                    <!-- Portfolio Date -->
+                    <div class="mr-auto">
+                      <p class="card-text"><small class="text-muted">Summer 2019</small></p>
+                    </div>
+                    <!-- Portfolio Tags -->
+                    <div>
+                      <span class="tag badge mr-2">LiDAR</span>
+                      <span class="tag badge mr-2">Python</span>
+                      <span class="tag badge mr-2">C</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- END: Portfolio Body -->
           </div>
-        </a>
-          <div class="caption">SUDOKU SOLVER</div>
-      </div>
-    </div>
-    <div class="col-sm-6 col-md-3">
-      <div class="portfolio">
-        <a href="https://github.com/Francis-Gurr/Yahtzee">
-          <img src="img/work-in-progress.jpg" class="img-responsive" alt="Francis Gurr - Yahtzee">
-          <div class="overlay">
-            <div class="overlay-text">YAHTZEE</div>
+          <!-- Portfolio: Link -->
+          <a href="#" class="stretched-link"></a>
+        </div>
+        <!-- END: Q-FREE Internship -->
+
+        <!-- START: Masters Project -->
+        <div class="card mb-3 portfolio">
+          <div class="row no-gutters">
+            <!-- START: Portfolio Body -->
+            <div class="col-sm-8">
+              <div class="d-flex flex-column h-100">
+                <div class="card-body">
+                <!-- Portfolio Title -->
+                <h4 class="card-title">Masters Project</h4>
+                <!-- Portfolio Description -->
+                <p class="card-text">Project proposed using road-side video cameras as a non-intrusive alternative to current ITS and infomobility systems.
+                  Video images were used to determine the speed of vehicles.
+                  The project proved successful and was able to provide vehicle speeds in real-time from road-side camera footage.
+                  <br><em>Project was supported by Q-Free ASA.</em></p>
+                </div>
+                <!-- Portfolio Footer -->
+                <div class="card-body flex-grow-0">
+                  <div class="d-flex">
+                    <!-- Portfolio Date -->
+                    <div class="mr-auto">
+                      <p class="card-text"><small class="text-muted">May 2020</small></p>
+                    </div>
+                    <!-- Portfolio Tags -->
+                    <div>
+                      <span class="tag badge mr-2">Machine Learning</span>
+                      <span class="tag badge mr-2">CNNs</span>
+                      <span class="tag badge mr-2">YOLOv3</span>
+                      <span class="tag badge mr-2">Python</span>
+                      <span class="tag badge mr-2">C++</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- END: Portfolio Body -->
+            <!-- Portfolio Image -->
+            <div class="col-sm-4">
+              <img src="img/sample43.png" class="card-img img-fluid" alt="Francis Gurr Portfolio - Masters Project Image">
+            </div>
           </div>
-        </a>
-          <div class="caption">YAHTZEE</div>
+          <!-- Portfolio: Link -->
+          <a href="#" class="stretched-link"></a>
+        </div>
+        <!-- END: Masters Project -->
+
+        <!-- START: Q-Free Internship -->
+        <div class="card mb-3 portfolio">
+          <div class="row no-gutters">
+            <!-- Portfolio Image -->
+            <div class="col-sm-4">
+              <img src="img/sample43.png" class="card-img img-fluid" alt="Francis Gurr Portfolio - Q-Free Internship Image">
+            </div>
+            <!-- START: Portfolio Body -->
+            <div class="col-sm-8">
+              <div class="d-flex flex-column h-100">
+                <div class="card-body">
+                <!-- Portfolio Title -->
+                <h4 class="card-title">Masters Project</h4>
+                <!-- Portfolio Description -->
+                <p class="card-text">Project proposed using road-side video cameras as a non-intrusive alternative to current ITS and infomobility systems.
+                  Video images were used to determine the speed of vehicles.
+                  The project proved successful and was able to provide vehicle speeds in real-time from road-side camera footage.
+                  <br><em>Project was supported by Q-Free ASA.</em></p>
+                </div>
+                <!-- Portfolio Footer -->
+                <div class="card-body flex-grow-0">
+                  <div class="d-flex">
+                    <!-- Portfolio Date -->
+                    <div class="mr-auto">
+                      <p class="card-text"><small class="text-muted">May 2020</small></p>
+                    </div>
+                    <!-- Portfolio Tags -->
+                    <div>
+                      <span class="tag badge mr-2">Machine Learning</span>
+                      <span class="tag badge mr-2">CNNs</span>
+                      <span class="tag badge mr-2">YOLOv3</span>
+                      <span class="tag badge mr-2">Python</span>
+                      <span class="tag badge mr-2">C++</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- END: Portfolio Body -->
+          </div>
+          <!-- Portfolio: Link -->
+          <a href="#" class="stretched-link"></a>
+        </div>
+        <!-- END: Q-FREE Internship -->
+
       </div>
+      <!-- END: Portfolio -->
+
+      <div class="col-sm-1"></div>
     </div>
   </div>
-</div>
-
-<!-- Experience Container -->
-<div class="container-fluid bg-1" id="experience">
-  <h2 class="text-center">EXPERIENCE<h2>
-  <div class="col-sm-4">
-    <h4><i class="fa fa-calendar"></i> Summer 2017</h4>
-    <h5><a href="https://www.dur.ac.uk/ecs/">Durham University</a></h5>
-  </div>
-  <div class="col-sm-8">
-    <h4>Open Day Ambassador</h4>
-    <p><br></p>
-  </div>
-  <div class="col-sm-4">
-    <h4><i class="fa fa-calendar"></i> September 2016</h4>
-    <h5><a href="https://www.dur.ac.uk/ecs/">School of Engineering and Computing Sciences, Durham University</a></h5>
-  </div>
-  <div class="col-sm-8">
-    <h4>Sustainability Workshop ‘How to embed sustainability into General Engineering curricula'​</h4>
-    <p>I was successful in securing a place on a joint academic-student workshop on 'How to embed sustainability into General Engineering curricula’. During this experience we met with Stanley Black & Decker to talk about how they embed sustainability into their company and then collaborated with the academic staff on how to best embed sustainability into the curriculum of the Durham University General Engineering course.</p>
-  </div>
-  <hr>
-  <div class="col-sm-4">
-    <h4><i class="fa fa-calendar"></i> September 2016</h4>
-    <h5><a href="https://www.dur.ac.uk/ecs/">Durham University</a></h5>
-  </div>
-  <div class="col-sm-8">
-    <h4>Open Day Ambassador</h4>
-    <p><br></p>
-  </div>
-  <hr>
-  <div class="col-sm-4">
-    <h4><i class="fa fa-calendar"></i> July 2015</h4>
-    <h5><a href="http://www.next.co.uk/">Next Plc</a></h5>
-  </div>
-  <div class="col-sm-8">
-    <h4>Sales Assistant</h4>
-    <p><br></p>
-  </div>
-  <hr>
-  <div class="col-sm-4">
-    <h4><i class="fa fa-calendar"></i> 2009 - 2014</h4>
-    <h5>Private Tutor</h5>
-  </div>
-  <div class="col-sm-8">
-    <h4>Maths, Science and English Tutor​</h4>
-    <p>I worked as a tutor preparing students for their GCSEs.</p>
-  </div>
-  <hr>
-  <div class="col-sm-4">
-    <h4><i class="fa fa-calendar"></i> 2014</h4>
-    <h5><a href="https://www.queenspark-academy.co.uk/">Queens Park Academy</a></h5>
-  </div>
-  <div class="col-sm-8">
-    <h4>Primary School Placement</h4>
-    <p>I spent Wednesday afternoons working alongside primary school teachers.</p>
-  </div>
-  <hr>
-  <div class="col-sm-4">
-    <h4><i class="fa fa-calendar"></i> January 2014</h4>
-    <h5><a href="http://www.entrecon.de">Entrecon</a></h5>
-  </div>
-  <div class="col-sm-8">
-    <h4>Assistant Translator​</h4>
-    <p>In this role I worked for Entrecon translating test papers from German to English. I worked with international clients and therefore learnt key communicative skills.</p>
-  </div>
-  <hr>
-  <div class="col-sm-4">
-    <h4><i class="fa fa-calendar"></i> June 2013</h4>
-    <h5><a href="http://www.etrust.org.uk/">EDT (The Engineering Development Trust)</a></h5>
-  </div>
-  <div class="col-sm-8">
-    <h4>Headstart Science and Engineering Course</h4>
-    <p>At Headstart we were given experience in all of the key disciplines of engineering through a series of projects. These included a design workshop with Dyson, an engineering mathematics course and an aerospace project. One of the main projects was a civil engineering task in which we modelled the Thames Barrier and were shown how it combats flooding. This was very educational as it taught me the value of large scale civil engineering projects. The largest and incidentally my favourite assignment was to build and programme an Arduino based robot to follow a pre-determined course. This gave me a basic introduction to programming which I have subsequently built upon.</p>
-  </div>
-  <hr>
-  <div class="col-sm-4">
-    <h4><i class="fa fa-calendar"></i> 2012 - 2013</h4>
-    <h5><a href="http://www.pooleswimmingclub.org.uk/">Poole Swimming Club</a></h5>
-  </div>
-  <div class="col-sm-8">
-    <h4>Swimming Instructor</h4>
-    <p>I volunteered as an instructor at my local swimming club.</p>
-  </div>
-  <hr>
-  <div class="col-sm-4">
-    <h4><i class="fa fa-calendar"></i> July 2012</h4>
-    <h5><a href="http://www.columba.co.uk/">Columba Cook Limited</a></h5>
-  </div>
-  <div class="col-sm-8">
-    <h4>Work Placement</h4>
-    <p>In this role I worked both off and on-site with Columba Cook Limited; a company that restores and designs Churches. I gained practical, hands on experience inspecting and overseeing construction as well as being encouraged to use initiative while working on my own projects. These included designing a beach hut for the local area. In this environment I learnt valuable team work skills and gained an appreciation for project based design.</p>
-  </div>
-  <hr>
-  <div class="col-sm-4">
-    <h4><i class="fa fa-calendar"></i> June 2011</h4>
-    <h5><a href="http://www.bisvalves.co.uk/">BiS Valves Ltd.</a></h5>
-  </div>
-  <div class="col-sm-8">
-    <h4>Work Placement</h4>
-    <p>In this role I gained insight into the inner workings of a company through my experience working in a whole variety of different departments. Not only did I have to be very adaptable and able to engage in a variety of different team based environments, I also learned many practical skills.</p>
-    <p>In the Sales department I gained experience processing quotes and orders. In the Manufacturing Workshop I learnt to use CNC machines. In the Engineering department I developed my Solidworks and CAD skills to create detailed drawings and assemblies.</p>
-    <p><a data-toggle="modal" href="#myModal">View Reference</a></p>
-  </div>
-</div>
-
-<!-- Education Container -->
-<div class="container-fluid bg-2" id="education">
-  <h2 class="text-center">EDUCATION<h2>
-  <div class="col-sm-6">
-    <h4><i class="fa fa-calendar"></i> 2015 - 2019</h4>
-    <h4>Durham University</h4>
-    <h4 class="margin">General Engineering MEng</h4>
-    <p>Year One Result: 64%
-      <br>72% - ENGI1141 Electronic Measurement
-      <br>70% - ENGI1141 Electromagnetism and Manufacture
-      <br>85% - COMP1011 Introduction to Programming</p>
-    <p>Awards:
-      <br>I was awarded 2nd place in the Athena Swan Level 1 Essay, for my essay titled 'Why are there fewer women in engineering?'. A line from which was quoted in <a href="https://www.dur.ac.uk/undergraduate/life/experience/news/?itemno=27469">this article</a>.</p>
-    <p>Societies:
-      <br>President and founder of the Circus Society
-      <br>President of the Harry Potter Society
-      <br>Website Manager for the Bureaucracy Society
-      <br>Attend Computer Science Society Hackathons</p>
-  </div>
-  <hr id="hr-2">
-  <div class="col-sm-6">
-    <h4><i class="fa fa-calendar"></i> 2007 - 2014</h4>
-    <h4>Bournemouth Grammar School</h4>
-    <h4 class="margin">Secondary School</h4>
-    <p>A Levels:
-      <br>A* - Chemistry
-      <br>3 As - Maths, Physics and German</p>
-    <p>AS Levels:
-      <br>5 As - Maths, Physics, Chemistry and German
-      <br>B - Music</p>
-    <p>GCSE:
-      <br>4 A*s - Maths, Physics, Chemistry and German
-      <br>6 As - including English, Spanish and a double AA in Engineering
-      <br>2 Bs</p>
-  </div>
-</div>
-
-<!-- Footer (Contact)-->
-<footer id="contact">
-  <a href="mailto:f.b.gurr@durham.ac.uk?"><i class="fa fa-envelope"></i> f.b.gurr@durham.ac.uk</a>
-  <span id="footer-bull">&bull;</span>
-  <br id="footer-br">
-  <a href="https://uk.linkedin.com/in/francis-gurr"><i class="fa fa-linkedin-square"></i></a>
-  <a href="https://github.com/Francis-Gurr"><i class="fa fa-github"></i></a>
-</footer>
-
-<!-- Modal (BiS Reference) -->
-<div id="myModal" class="modal" role="dialog">
-  <span class="close" data-dismiss="modal">&times;</span>
-  <img src="img/BiSValves.jpg" class="modal-content" alt="Francis Gurr - BiS Valves Reference">
-</div>
-
-<!-- JS -->
-<script>
-  $(document).ready(function(){
-          $("#myModal").modal();
-      });
-  });
-</script>
-
 </body>
 </html>
