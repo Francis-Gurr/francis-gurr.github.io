@@ -41,15 +41,18 @@ a:focus {
 }
 .contact li{
   display: inline-block;
-  padding: 20px;
+  padding: 18px;
 }
-.contact i {
-  color: #E9EBF8;
+.icon{
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  fill: #E9EBF8;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
   font-size: 24px;
-  -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
-.contact i:hover{
+.icon:hover{
   -webkit-transform: scale(1.5, 1.5);
   transform: scale(1.5, 1.5);
 }
