@@ -87,6 +87,9 @@ span.nobr { white-space: nowrap; }
   background-color: #2A9D8F;
   font-size: 14px;
 }
+.references a{
+    color: inherit;
+}
 /* Adjust format for medium (tablet) screens */
 @media screen and (max-width: 768px){
 }
