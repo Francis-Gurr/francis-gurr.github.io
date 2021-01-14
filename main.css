@@ -6,6 +6,16 @@ html, body {
     background-color: #F5F2F8; /* Ghost White */
     color: #264653; /* Charcoal */
 }
+.container-fluid {
+    max-width: 1440px;
+    margin:auto;
+}
+aside {
+    position: relative;
+    width: 100%;
+}
+
+
 a {
   color: #4A8FE7; /* United Nations Blue */
 }
@@ -32,7 +42,6 @@ span.nobr { white-space: nowrap; }
   align-items: center;
   text-align: center;
   border-radius: 10px;
-  top:25px;
 }
 .contact {
   list-style-type: none;
@@ -49,9 +58,11 @@ span.nobr { white-space: nowrap; }
   width: 1em;
   height: 1em;
   fill: #E9EBF8;
+  color: #E9EBF8;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   font-size: 24px;
+  vertical-align: top;
 }
 .icon:hover{
   -webkit-transform: scale(1.5, 1.5);
@@ -90,9 +101,35 @@ span.nobr { white-space: nowrap; }
 .references a{
     color: inherit;
 }
-/* Adjust format for medium (tablet) screens */
-@media screen and (max-width: 768px){
+.ref_link {
+    color: #4A8FE7; /* United Nations Blue */
 }
-/* Adjust format for small (mobile) screens */
-@media screen and (max-width: 480px) {
+
+/* Extra small devices (portrait phones, less than 576px) */
+/* No media query for `xs` since this is the default in Bootstrap */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+    
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    aside {
+        position: fixed !important;
+        width: 288px;
+    }
+    .main-content {
+        margin-left: 308px;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    
 }
