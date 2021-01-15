@@ -132,6 +132,7 @@ span.nobr { white-space: nowrap; }
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
     .img-cover {
+        height: 100%;
         max-height: 100%;
 }
 
