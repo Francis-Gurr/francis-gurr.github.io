@@ -1,117 +1,105 @@
+/* Global */
 html, body {
     font: 16px Source-Sans-Pro, sans-serif;
     min-height: 100%;
     line-height: 1.8;
     margin-top: 10px;
-    background-color: #F5F2F8; /* Ghost White */
-    color: #264653; /* Charcoal */
+    background-color: rgb(18,18,18); /* Rich Black FOGRA 39 */
+    color: rgba(255,255,255,0.87); /* Almost White */
 }
-.container-fluid {
-    max-width: 1440px;
-    margin:auto;
-}
-aside {
-    position: relative;
-    width: 100%;
-}
-
-
 a {
-  color: #4A8FE7; /* United Nations Blue */
+    color: rgb(223,223,32); /* Titanium Yellow */
 }
 a:hover,
 a:focus {
-  color: #3377ff; /* Darker blue */
-  text-decoration: underline;
+    color: rgb(236,236,19); /* Xanthic */
+    text-decoration: underline;
+}
+.container-fluid {
+    max-width: 1440px;
+    margin: auto;
 }
 span.nobr { white-space: nowrap; }
-.bg-light {
-  background-color: #E9EBF8; /* Lavender Web */
-  color: #264653; /* Charcoal */
-}
-.darken {
-  padding-right: 50px;
-  padding-top: 0px;
-  padding-bottom: 0px;
-  margin-top: -5px;
-}
-.sidebar {
-  background-color: #2A9D8F; /* Persian Green */
-  color: #000; /* Charcoal */
-  padding: 15px;
-  align-items: center;
-  text-align: center;
-  border-radius: 10px;
-}
-.contact {
-  list-style-type: none;
-  text-align: center;
-  margin: 0;
-  padding: 0;
-}
-.contact li{
-  display: inline-block;
-  padding: 18px;
-}
-.icon{
-  display: inline-block;
-  width: 1em;
-  height: 1em;
-  fill: #E9EBF8;
-  color: #E9EBF8;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  font-size: 24px;
-  vertical-align: top;
-}
-.icon:hover{
-  -webkit-transform: scale(1.5, 1.5);
-  transform: scale(1.5, 1.5);
-}
-.page {
-  /*background-color: #E9EBF8; /* Lavender Web */
-  color: #264653; /* Charcoal */
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
-}
-.portfolio {
-  /*background-color: #E9EBF8; /* Lavender Web */
-  color: #264653; /* Charcoal */
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
-  -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-.portfolio:hover {
-  -webkit-transform: scale(1.02, 1.02);
-  transform: scale(1.02, 1.02);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+
+/* Sidebar */
+aside {
+    position: relative;
+    width: 100%;
+    padding: 15px;
+    background-color: rgb(32,96,96); /* Skobeloff */
+    border-radius: 10px;
+    align-items: center;
+    text-align: center;   
 }
 .profile {
-  max-width:200px;
-  margin-top: 10px;
-  margin-bottom: 25px;
+    max-width: 200px;
+    margin-top: 10px;
+    margin-bottom: 25px;
 }
-.tag {
-  background-color: #2A9D8F;
-  font-size: 14px;
+.contact {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-align: center;
 }
-.references a{
-    color: inherit;
+.contact li{
+    display: inline-block;
+    padding: 18px;
 }
-.ref_link {
-    color: #4A8FE7; /* United Nations Blue */
+.icon{
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    fill: rgba(255,255,255,0.87);
+    color: rgba(255,255,255,0.87);
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    font-size: 24px;
+    vertical-align: top;
+}
+.icon:hover{
+    -webkit-transform: scale(1.5, 1.5);
+    transform: scale(1.5, 1.5);
+}
+
+/* Homepage */
+.portfolio {
+    background-color: rgba(255,255,255,0.14); /* White transparent overlay */
+    border-radius: 10px;
+    overflow: hidden;
+    -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.portfolio:hover {
+    background-color: rgba(255,255,255,0.16); /* White transparent overlay */
+    -webkit-transform: scale(1.02, 1.02);
+    transform: scale(1.02, 1.02);
 }
 .img-cover {
     width: 100%;
     max-height: 279px;
     object-fit: cover;
 }
+.tag {
+    background-color: rgb(32,96,96); /* Skobeloff */
+    font-size: 14px;
+}
 
-/* Extra small devices (portrait phones, less than 576px) */
-/* No media query for `xs` since this is the default in Bootstrap */
+/* Pages */
+.page {
+  background-color: rgba(255,255,255,0.14); /* White transparent overlay */
+  border-radius: 10px;
+  overflow: hidden;
+}
+.references a{
+    color: inherit;
+}
+.ref_link {
+    color: rgb(223,223,32); /* Titanium Yellow */
+}
+
+
+/* Responsiveness */
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
@@ -125,7 +113,7 @@ span.nobr { white-space: nowrap; }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-        aside {
+    aside {
         position: fixed !important;
         width: 288px;
     }
