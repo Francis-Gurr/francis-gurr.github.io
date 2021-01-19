@@ -81,7 +81,7 @@ aside {
     object-fit: cover;
 }
 .text-muted {
-    color: rgba(255,255,255,0.60); /* Muted White */
+    color: rgba(255,255,255,0.60) !important; /* Muted White */
 }
 .tag {
     background-color: rgb(32,96,96); /* Skobeloff */
@@ -94,7 +94,7 @@ aside {
     overflow: hidden;
 }
 .figure-caption {
-    color: rgba(255,255,255,0.60); /* Muted White */
+    color: rgba(255,255,255,0.60) !important; /* Muted White */
 }
 .references a{
     color: inherit;
