@@ -64,7 +64,7 @@ aside {
 
 /* Homepage */
 .portfolio {
-    background-color: rgba(255,255,255,0.14); /* White transparent overlay */
+    background-color: rgba(255,255,255,0.09); /* White transparent overlay */
     border-radius: 10px;
     overflow: hidden;
     -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -80,6 +80,9 @@ aside {
     max-height: 279px;
     object-fit: cover;
 }
+.textmuted {
+    color: rgba(255,255,255,0.60); /* Muted White */
+}
 .tag {
     background-color: rgb(32,96,96); /* Skobeloff */
     font-size: 14px;
@@ -87,9 +90,12 @@ aside {
 
 /* Pages */
 .page {
-  background-color: rgba(255,255,255,0.14); /* White transparent overlay */
-  border-radius: 10px;
-  overflow: hidden;
+    background-color: rgba(255,255,255,0.09); /* White transparent overlay */
+    border-radius: 10px;
+    overflow: hidden;
+}
+.figure-caption {
+    color: rgba(255,255,255,0.60); /* Muted White */
 }
 .references a{
     color: inherit;
