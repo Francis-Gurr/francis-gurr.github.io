@@ -96,6 +96,9 @@ aside {
 .figure-caption {
     color: rgba(255,255,255,0.60) !important; /* Muted White */
 }
+.references{
+    font-size: 90%;
+}
 .references a{
     color: inherit;
 }
