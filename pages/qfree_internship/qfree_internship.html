@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Francis Gurr - Q-Free Internship</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Q-Free internship and third year design project">
+    <meta name="keywords" content="Francis, Gurr, francis.gurr@gmail.com">
+    <meta name="author" content="Francis Gurr">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="Francis Gurr">
+    <meta property="og:title" content="Q-Free internship - Francis Gurr">
+    <meta property="og:description" content="Q-Free internship and third year design project">
+    <meta property="og:url" content="http://francisgurr.com">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_GB">
+    <meta property="og:image" content="../../img/cover_imgs/qfree_internship_cover.png">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../../img/favicon.ico" />
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro">
+    <link rel="stylesheet" href="../../main.css">
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/099f2106a2.js" crossorigin="anonymous"></script>
+    <script>
+        $(function(){
+            $("#sidebar").load("../../sidebar.html");
+        });
+    </script>
+</head>
+
+
+<!-- BODY -->
+<body>
+<div class="container-fluid">
+    <!-- Sidebar -->
+    <div id="sidebar"></div>
+    <!-- START: Page -->
+    <div class="main-content">
+        <div class="card mb-3 page">
+            <div class="card-body">
+                <!-- Title -->
+                <h3 class="mb-3">Q-Free internship and third year design project</h3>
+                <!-- Text -->
+                <p>
+                    During the third year of my masters degree I was project manager for the group design project.
+                    The project was supported by Q-Free and due to it’s success I was awarded an internship to continue working on the project over the summer.
+                </p>
+                <p>
+                    The aim of the project was to design and develop a prototype of a non-intrusive intelligent transportation system using sensors to detect and classify vehicles.
+                    Traditionally, the market for vehicle classification has been dominated by in-road systems using sensors such as inductive loops to detect axles in order t classify vehicles.
+                    These solutions are capable of classifying vehicles into very specific categories with a high degree of accuracy.
+                    However, a major disadvantage is that they are intrusive; they require the road to be closed during installation and maintenance.
+                    This is costly, time-consuming and endangers workers’ lives.
+                    Therefore, there is considerable demand for non-intrusive solutions that can be deployed out-of-road.
+                </p>
+                <div class="row">
+                    <div class="col-sm-8">
+                        <p>
+                            The proposed solution was to capture 2D side-profiles of passing vehicles using a mixture of LiDAR and radar sensing technologies; these could then be classified using a machine learning algorithm.
+                            A LiDAR sensor positioned perpendicular to the road would scan vertically.
+                            For each revolution of the LiDAR scanner, a set of distances measurements would be calculated.
+                            These LiDAR “slices” could then be used to create a 2D side-profile of the passing vehicle as shown in Figure x.
+                            The radar sensor would be used to measure the speed of the vehicle.
+                            Using the known frequency of the LiDAR and the speed of the vehicle, the horizontal distance between the LiDAR slices can be calculated.
+                            Finally, the accurate side-profile could be matched to the correct vehicle classification using a machine learning algorithm.
+                        </p>
+                    </div>
+                    <div class="col-sm-4">
+                        <figure class="figure">
+                            <img src="gif.gif" class="figure-img img-fluid rounded" style="background-color: rgba(255,255,255,0.8);" alt="Gif to illustrate the operation of the LiDAR">
+                            <figcaption class="figure-caption">The operation of the LiDAR</figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <p>
+                    This design was awarded a 1st class and we were given the chance to spend a week developing an initial prototype.
+                    A scale model of a road with 2D vehicles was built and Q-Free provided the required sensors.
+                    Vicky Miles and I wrote a Python script to generate 2D profiles of the passing model vehicles using the LiDAR data (<a href="https://github.com/Francis-Gurr/Q-Free-Prototype1">see GitHub</a>).
+                    Due to the scale, the radar sensor was unable to produce reliable measurements at the slow speeds.
+                    Therefore, we fixed the speed of the vehicles.
+                    The prototype was very successful as the vehicles could easily visually identified and classified from the generated side-profiles (see Figure X).
+                </p>
+                <div class="row" style="max-width: 750px; margin: auto;">
+                    <figure class="figure col-sm-6">
+                        <img src="scale_model.jpg" class="figure-img img-fluid rounded" alt="Scale model">
+                        <figcaption class="figure-caption">Scale model</figcaption>
+                    </figure>
+                    <figure class="figure col-sm-6">
+                        <img src="prototype.png" class="figure-img img-fluid rounded" alt="The physical prototype">
+                        <figcaption class="figure-caption">The physical prototype</figcaption>
+                    </figure>
+                </div>
+                <p>
+                    We also tested the prototype on real vehicles, however due to the low frequency of the LiDAR it was not possible to get enough slices to produce an accurate side-profile (see Figure X).
+                    To resolve this issue, a higher frequency LiDAR scanner would be required, to produce accurate, high-resolution side-profiles in the real world application.
+                </p>
+                <div class="row">
+                    <figure class="figure col-6 col-md-3">
+                        <img src="indoor_car.png" class="figure-img img-fluid rounded" alt="Ouput of the model car">
+                        <figcaption class="figure-caption">Ouput of the model car</figcaption>
+                    </figure>
+                    <figure class="figure col-6 col-md-3">
+                        <img src="indoor_lorry.png" class="figure-img img-fluid rounded" alt="Ouput of the model lorry">
+                        <figcaption class="figure-caption">Ouput of the model lorry</figcaption>
+                    </figure>
+                    <figure class="figure col-6 col-md-3">
+                        <img src="outdoor_car.png" class="figure-img img-fluid rounded" alt="Ouput of a real car">
+                        <figcaption class="figure-caption">Ouput of the model car</figcaption>
+                    </figure>
+                    <figure class="figure col-6 col-md-3">
+                        <img src="outdoor_van.png" class="figure-img img-fluid rounded" alt="Ouput of a real van">
+                        <figcaption class="figure-caption">Ouput of the model lorry</figcaption>
+                    </figure>
+                </div>
+                <p>
+                    Following the success of the design and prototype, Q-Free gave me the opportunity to continue the project during a summer internship.
+                    Our main task was writing a C program to improve upon the Python script, by increasing performance and enabling real-time output.
+                    Unfortunately, due to logistical delays, we did not receive a faster LiDAR scanner until shortly before the end of the internship.
+                    Therefore, we had limited time to fully test the software we had created with real sensor inputs.
+                </p>
+                <p>
+                    Q-Free was impressed with my performance during the internship and offered to support me with a <a href="../masters_project/masters_project.html">masters project<a/> in vehicle detection using machine learning.
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- END: Page -->
+</div>
+</body>
+</html>
