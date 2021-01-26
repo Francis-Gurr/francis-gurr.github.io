@@ -51,7 +51,7 @@
                 </p>
                 <p>
                     The aim of the project was to design and develop a prototype of a non-intrusive intelligent transportation system using sensors to detect and classify vehicles.
-                    Traditionally, the market for vehicle classification has been dominated by in-road systems using sensors such as inductive loops to detect axles in order t classify vehicles.
+                    Traditionally, the market for vehicle classification has been dominated by in-road systems using sensors such as inductive loops to detect axles in order to classify vehicles.
                     These solutions are capable of classifying vehicles into very specific categories with a high degree of accuracy.
                     However, a major disadvantage is that they are intrusive; they require the road to be closed during installation and maintenance.
                     This is costly, time-consuming and endangers workers’ lives.
@@ -63,7 +63,7 @@
                             The proposed solution was to capture 2D side-profiles of passing vehicles using a mixture of LiDAR and radar sensing technologies; these could then be classified using a machine learning algorithm.
                             A LiDAR sensor positioned perpendicular to the road would scan vertically.
                             For each revolution of the LiDAR scanner, a set of distances measurements would be calculated.
-                            These LiDAR “slices” could then be used to create a 2D side-profile of the passing vehicle as shown in Figure x.
+                            These LiDAR “slices” could then be used to create a 2D side-profile of the passing vehicle.
                             The radar sensor would be used to measure the speed of the vehicle.
                             Using the known frequency of the LiDAR and the speed of the vehicle, the horizontal distance between the LiDAR slices can be calculated.
                             Finally, the accurate side-profile could be matched to the correct vehicle classification using a machine learning algorithm.
@@ -82,7 +82,7 @@
                     Vicky Miles and I wrote a Python script to generate 2D profiles of the passing model vehicles using the LiDAR data (<a href="https://github.com/Francis-Gurr/Q-Free-Prototype1">see GitHub</a>).
                     Due to the scale, the radar sensor was unable to produce reliable measurements at the slow speeds.
                     Therefore, we fixed the speed of the vehicles.
-                    The prototype was very successful as the vehicles could easily visually identified and classified from the generated side-profiles (see Figure X).
+                    The prototype was very successful as the vehicles could easily visually identified and classified from the generated side-profiles.
                 </p>
                 <div class="row" style="max-width: 750px; margin: auto;">
                     <figure class="figure col-sm-6">
@@ -91,11 +91,11 @@
                     </figure>
                     <figure class="figure col-sm-6">
                         <img src="prototype.png" class="figure-img img-fluid rounded" alt="The physical prototype">
-                        <figcaption class="figure-caption">The physical prototype</figcaption>
+                        <figcaption class="figure-caption">The physical prototype; LiDAR and radar sensor, raspberry pi and a battery bank</figcaption>
                     </figure>
                 </div>
                 <p>
-                    We also tested the prototype on real vehicles, however due to the low frequency of the LiDAR it was not possible to get enough slices to produce an accurate side-profile (see Figure X).
+                    We also tested the prototype on real vehicles, however due to the low frequency of the LiDAR it was not possible to get enough slices to produce an accurate side-profile.
                     To resolve this issue, a higher frequency LiDAR scanner would be required, to produce accurate, high-resolution side-profiles in the real world application.
                 </p>
                 <div class="row">
@@ -109,11 +109,11 @@
                     </figure>
                     <figure class="figure col-6 col-md-3">
                         <img src="outdoor_car.png" class="figure-img img-fluid rounded" alt="Ouput of a real car">
-                        <figcaption class="figure-caption">Ouput of the model car</figcaption>
+                        <figcaption class="figure-caption">Ouput of a real car</figcaption>
                     </figure>
                     <figure class="figure col-6 col-md-3">
                         <img src="outdoor_van.png" class="figure-img img-fluid rounded" alt="Ouput of a real van">
-                        <figcaption class="figure-caption">Ouput of the model lorry</figcaption>
+                        <figcaption class="figure-caption">Ouput of a real lorry</figcaption>
                     </figure>
                 </div>
                 <p>
