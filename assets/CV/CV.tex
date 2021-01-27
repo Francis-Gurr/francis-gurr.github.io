@@ -1,4 +1,4 @@
-\documentclass[a4paper, 12pt, hidelinks]{article}
+\documentclass[a4paper, 11pt, hidelinks]{article}
 
 \usepackage[margin=0in]{geometry}
 \usepackage[none]{hyphenat}
@@ -10,6 +10,7 @@
 \usepackage[T1]{fontenc}
 \usepackage[default]{sourcesanspro}
 \usepackage{fontawesome}
+\renewcommand{\baselinestretch}{1.05}
 
 % Colour Pallete
 \usepackage{xcolor}
@@ -21,13 +22,13 @@
 
 % Section Headings
 \usepackage{titlesec}
-\titleformat{\section}[block]{\Large\bfseries\center}{}{0em}{}
-\titlespacing*{\section}{0em}{1em}{0.5em}
+\titleformat{\section}[block]{\LARGE\bfseries\center}{}{0em}{}
+\titlespacing*{\section}{0em}{0em}{0.25em}
 
-% Experience headings \xp{Name}{Place}{Date}
+% Experience page headings \xp{Name}{Place}{Date}
 \newcommand{\xp}[3]{
 	\vspace{0.25em}
-	\textbf{#1} \quad \emph{#2} \hfill \textbf{#3}
+	\textbf{\large#1} \quad \emph{\large#2} \hfill \textbf{\large#3}
 }
 
 % Skill boxes
@@ -38,11 +39,12 @@
 
 % Custom itemise
 \usepackage{xparse}
-\NewDocumentEnvironment{itemise}{O{1em} O{-0.25em} O{-0.5em}}
+\NewDocumentEnvironment{itemise}{O{1em} O{-0.25em} O{-0.5em} O{0em}}
 {\begin{itemize}[align=parleft, left=0pt..{#1}]
 \setlength\itemsep{#2}
 \vspace{#3}}
-{\end{itemize}}
+{\vspace{#4}
+\end{itemize}}
 
 %No page numbering
 \pagenumbering{gobble}
@@ -54,11 +56,11 @@
 		\begin{minipage}{0.33\textwidth}
 			\hspace{0.063\textwidth}
 			\begin{minipage}{0.87\textwidth}
-				\vspace{1em}
+				\vspace{1.25em}
 				\section{\huge Francis Gurr}
 				
 				% CONTACT
-				\begin{itemise}[2em][0em][0em]
+				\begin{itemise}[2em][-0.25em][0.5em][0em]
 					\item[\faHome] Sheffield, UK
 					\item[\faEnvelope] \href{mailto:francisgurr@gmail.com}{francisgurr@gmail.com}
 					\item[\faGlobe] \href{http://www.francisgurr.com}{francisgurr.com}
@@ -68,7 +70,7 @@
 				
 				% SUMMARY
 				\section{Summary}
-				Recent Electronic Engineering (MEng) graduate from  Durham University.
+				I am a recent Electronic Engineering (MEng) graduate from  Durham University.
 				My main interests lie in software development and machine learning.
 				
 				I enjoy solving complex problems both independently and as part of a team.
@@ -77,8 +79,10 @@
 				Whilst completing projects I am highly motivated, organised and strive to ensure all my work is of a high standard.
 				These attributes have led me to receive a first in every programming assignment throughout my degree.
 				
+				In my spare time I am a keen rock climber, mountain unicyclist and occasional juggler. 
+				
 				% SKILLS
-				\section{Skills\vspace{-0.25em}}
+				\section{Skills}
 				\emph{Confident:\vspace{0.25em}}\\
 				\skill{Java}
 				\skill{Python}
@@ -106,13 +110,13 @@
 				% REFERENCES
 				\section{References}
 				\textbf{Dr Stefano Giani}
-				\begin{itemise}[2em][-0.25em][-0.5em]
+				\begin{itemise}[2em][-0.25em][-0.5em][0em]
 				\item[\faBriefcase] Assistant Professor\\ \emph{Durham University}
 				\item[\faEnvelope] \href{mailto:stefano.giani@durham.ac.uk}{stefano.giani@durham.ac.uk}
 				\end{itemise}
 				
 				\textbf{Colin Reekie}
-				\begin{itemise}[2em][-0.25em][-0.5em]
+				\begin{itemise}[2em][-0.25em][-0.5em][0em]
 				\item[\faBriefcase] Head of Development\\ \emph{Q-Free ASA}
 				\item[\faEnvelope] \href{mailto:colin.reekie@q-free.com}{colin.reekie@q-free.com}
 				\end{itemise}
@@ -125,19 +129,19 @@
 	\hspace{0.02\textwidth}
 	% Main body
 	\begin{minipage}{0.587\textwidth}
-		\vspace{-0.5em}
+		\vspace{-0.25em}
 		
 		% EXPERIENCE
 		\section{Experience}
 		% Final Year Project
 		\xp{Masters Project - 1st Class (80\%)}{Durham University}{2019 - 2020}
 		\begin{itemise}
-			\item Supported by Q-Free ASA.
-			\item Project proposed using road-side video cameras as a non-intrusive alternative to current ITS and infomobility systems.
+			\item Supported by \href{https://www.q-free.com/}{Q-Free ASA}, a global leader in intelligent transportation systems (ITS).
+			\item The project proposed using road-side video cameras as a non-intrusive alternative to current ITS and infomobility systems.
 			\item Video images were used to determine the speed of vehicles.
 			\item A neural network (YOLOv3) was used for object detection with an accuracy of 98\% mAP.
 			\item A Kalman filter was used to track the vehicles.
-			\item Developed software to calibrate the camera using road markings.
+			\item I developed Python software to calibrate the camera using road markings, and used C++ to calculate the vehicle speeds.
 			\item The project proved successful and was able to provide vehicle speeds in real-time from road-side camera footage.
 			\hfill
 			\href{http://www.francisgurr.com/pages/masters_project/masters_project.html}{\faExternalLink}
@@ -145,21 +149,20 @@
 		% Internship
 		\xp{R\&D Intern}{Q-Free ASA, Bristol}{Jul 2019 - Sep 2019}
 		\begin{itemise}
-			\item The continuation of a successful third year design project.
-			\item Project managed a group of six students.
-			\item Designed and developed a prototype non-intrusive roadside detection system for counting and classifing vehicles.
-			\item Innovative design using LiDAR and radar.
-			\item Developed software to generate 2D side profiles of vehicles using LiDAR data.
+			\item The continuation of a successful third year design project for which I was project manager.
+			\item Designed and developed an innovative prototype for a non-intrusive roadside detection system for counting and classifing vehicles.
+			\item I developed software in C to generate 2D side profiles of vehicles using data from LiDAR and radar sensors.
 			\hfill
 			\href{http://www.francisgurr.com/pages/qfree_internship/qfree_internship.html}{\faExternalLink}
 		\end{itemise}
-		% Co author
+		% Co-author
 		\xp{Summer Project}{Durham University}{Jun 2018 - Feb 2019}
 		\begin{itemise}
-			\item Co-author of ancillary software for an academic paper entitled \emph{Quartic Graphs that are Bakry-Émery Curvature Sharp}.
-			\item Published in Discrete Mathematics \textbf{343}(3),\\ \href{https://doi.org/10.1016/j.disc.2019.111767}{DOI: 10.1016/j.disc.2019.111767}.
+			\item Co-author of ancillary Python software for an academic paper entitled \emph{Quartic Graphs that are Bakry-Émery Curvature Sharp}.
+			\item I jointly developed a computer classification algorithm to recursively generate all radius two local configurations of quartic graphs.
+			\item Published in Discrete Mathematics \textbf{343}(3),\\ \href{https://arxiv.org/abs/1902.10665}{DOI: 10.1016/j.disc.2019.111767}.
 			\hfill
-			\href{http://www.francisgurr.com/math-project}{\faExternalLink}
+			\href{http://www.francisgurr.com/pages/summer_project/summer_project.html}{\faExternalLink}
 		\end{itemise}
 		
 		% EDUCATION
@@ -167,7 +170,7 @@
 		% MEng
 		\xp{MEng Electronic Engineering - 2:1}{Durham University}{2015 - 2020}
 		\begin{itemise}
-			\item Took a year out following bereavement.
+			\item Took a year out following bereavement as an exam only student.
 		\end{itemise}
 		% MChem
 		\xp{MChem Chemistry}{Durham University}{2014 - 2015}
@@ -182,8 +185,8 @@
 		
 		% ACHIEVEMENTS
 		\section{Achievements}
-		\begin{itemise}[1em][-0.25em][0em]
-			\item Launched first ever Durham Yule Ball with a budget of over £3000, which has been nominated for best student event and commended by the leading student newspaper.
+		\begin{itemise}[1em][-0.25em][0em][0em]
+			\item Launched first ever Durham Yule Ball with a budget of over £3000, which was nominated for best student event and commended by the leading student newspaper.
 			\hfill \href{https://www.palatinate.org.uk/things-you-need-to-do-in-durham-before-graduating/}{\faExternalLink}
 			\item Founded the Durham Circus Society.
 			\item 2nd place in the Athena Swan Level 1 Essay, entitled \emph{Why are there fewer women in engineering?}.
