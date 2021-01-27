@@ -1,0 +1,196 @@
+\documentclass[a4paper, 12pt, hidelinks]{article}
+
+\usepackage[margin=0in]{geometry}
+\usepackage[none]{hyphenat}
+\usepackage{enumitem}
+\usepackage{hyperref}
+
+
+% Font
+\usepackage[T1]{fontenc}
+\usepackage[default]{sourcesanspro}
+\usepackage{fontawesome}
+
+% Colour Pallete
+\usepackage{xcolor}
+\definecolor{text_color}{HTML}{121212} % Rich Black FOGRA 39
+\definecolor{sidebar_color}{HTML}{c6ecec} %Powder Blue
+\definecolor{bg_color}{HTML}{ffffff} % White
+\pagecolor{bg_color}
+\color{text_color}
+
+% Section Headings
+\usepackage{titlesec}
+\titleformat{\section}[block]{\Large\bfseries\center}{}{0em}{}
+\titlespacing*{\section}{0em}{1em}{0.5em}
+
+% Experience headings \xp{Name}{Place}{Date}
+\newcommand{\xp}[3]{
+	\vspace{0.25em}
+	\textbf{#1} \quad \emph{#2} \hfill \textbf{#3}
+}
+
+% Skill boxes
+\usepackage[skins]{tcolorbox}
+\newcommand{\skill}[1]{
+	\tcbox[skin=enhanced, nobeforeafter, colback=bg_color, colframe=bg_color, coltext=text_color, size=fbox, height=15pt]{\footnotesize#1}
+}
+
+% Custom itemise
+\usepackage{xparse}
+\NewDocumentEnvironment{itemise}{O{1em} O{-0.25em} O{-0.5em}}
+{\begin{itemize}[align=parleft, left=0pt..{#1}]
+\setlength\itemsep{#2}
+\vspace{#3}}
+{\end{itemize}}
+
+%No page numbering
+\pagenumbering{gobble}
+
+\begin{document}
+	% Sidebar
+	\noindent\fcolorbox{sidebar_color}{sidebar_color}{%
+		\color{text_color}
+		\begin{minipage}{0.33\textwidth}
+			\hspace{0.063\textwidth}
+			\begin{minipage}{0.87\textwidth}
+				\vspace{1em}
+				\section{\huge Francis Gurr}
+				
+				% CONTACT
+				\begin{itemise}[2em][0em][0em]
+					\item[\faHome] Sheffield, UK
+					\item[\faEnvelope] \href{mailto:francisgurr@gmail.com}{francisgurr@gmail.com}
+					\item[\faGlobe] \href{http://www.francisgurr.com}{francisgurr.com}
+					\item[\faLinkedin] \href{https://www.linkedin.com/in/francis-gurr/}{francis-gurr}
+					\item[\faGithub] \href{https://github.com/Francis-Gurr}{Francis-Gurr}
+				\end{itemise}
+				
+				% SUMMARY
+				\section{Summary}
+				Recent Electronic Engineering (MEng) graduate from  Durham University.
+				My main interests lie in software development and machine learning.
+				
+				I enjoy solving complex problems both independently and as part of a team.
+				I am a fast learner and enjoy widening my skill set by challenging myself with personal projects.
+				I have experience working on large long term projects and can work well in a range of team dynamics.
+				Whilst completing projects I am highly motivated, organised and strive to ensure all my work is of a high standard.
+				These attributes have led me to receive a first in every programming assignment throughout my degree.
+				
+				% SKILLS
+				\section{Skills\vspace{-0.25em}}
+				\emph{Confident:\vspace{0.25em}}\\
+				\skill{Java}
+				\skill{Python}
+				\skill{C}
+				\skill{MatLab}
+				\skill{LaTeX}
+				
+				\vspace{0.25em}
+				
+				\skill{CNNs}
+				\skill{Excel}
+				\skill{German}
+				\\
+				\emph{Competent:\vspace{0.2em}}\\
+				\skill{Javascript}
+				\skill{C++}
+				\skill{Linux}
+				\skill{Electronics}
+				\\
+				\emph{Experience with:\vspace{0.2em}}\\
+				\skill{SQL}
+				\skill{PHP}
+				\skill{Graphic Design}
+				
+				% REFERENCES
+				\section{References}
+				\textbf{Dr Stefano Giani}
+				\begin{itemise}[2em][-0.25em][-0.5em]
+				\item[\faBriefcase] Assistant Professor\\ \emph{Durham University}
+				\item[\faEnvelope] \href{mailto:stefano.giani@durham.ac.uk}{stefano.giani@durham.ac.uk}
+				\end{itemise}
+				
+				\textbf{Colin Reekie}
+				\begin{itemise}[2em][-0.25em][-0.5em]
+				\item[\faBriefcase] Head of Development\\ \emph{Q-Free ASA}
+				\item[\faEnvelope] \href{mailto:colin.reekie@q-free.com}{colin.reekie@q-free.com}
+				\end{itemise}
+				\vfill
+				\vspace{0.2em}
+				\end{minipage}
+		\end{minipage}
+	}
+	% Spacing
+	\hspace{0.02\textwidth}
+	% Main body
+	\begin{minipage}{0.587\textwidth}
+		\vspace{-0.5em}
+		
+		% EXPERIENCE
+		\section{Experience}
+		% Final Year Project
+		\xp{Masters Project - 1st Class (80\%)}{Durham University}{2019 - 2020}
+		\begin{itemise}
+			\item Supported by Q-Free ASA.
+			\item Project proposed using road-side video cameras as a non-intrusive alternative to current ITS and infomobility systems.
+			\item Video images were used to determine the speed of vehicles.
+			\item A neural network (YOLOv3) was used for object detection with an accuracy of 98\% mAP.
+			\item A Kalman filter was used to track the vehicles.
+			\item Developed software to calibrate the camera using road markings.
+			\item The project proved successful and was able to provide vehicle speeds in real-time from road-side camera footage.
+			\hfill
+			\href{http://www.francisgurr.com/pages/masters_project/masters_project.html}{\faExternalLink}
+		\end{itemise}
+		% Internship
+		\xp{R\&D Intern}{Q-Free ASA, Bristol}{Jul 2019 - Sep 2019}
+		\begin{itemise}
+			\item The continuation of a successful third year design project.
+			\item Project managed a group of six students.
+			\item Designed and developed a prototype non-intrusive roadside detection system for counting and classifing vehicles.
+			\item Innovative design using LiDAR and radar.
+			\item Developed software to generate 2D side profiles of vehicles using LiDAR data.
+			\hfill
+			\href{http://www.francisgurr.com/pages/qfree_internship/qfree_internship.html}{\faExternalLink}
+		\end{itemise}
+		% Co author
+		\xp{Summer Project}{Durham University}{Jun 2018 - Feb 2019}
+		\begin{itemise}
+			\item Co-author of ancillary software for an academic paper entitled \emph{Quartic Graphs that are Bakry-Émery Curvature Sharp}.
+			\item Published in Discrete Mathematics \textbf{343}(3),\\ \href{https://doi.org/10.1016/j.disc.2019.111767}{DOI: 10.1016/j.disc.2019.111767}.
+			\hfill
+			\href{http://www.francisgurr.com/math-project}{\faExternalLink}
+		\end{itemise}
+		
+		% EDUCATION
+		\section{Education}
+		% MEng
+		\xp{MEng Electronic Engineering - 2:1}{Durham University}{2015 - 2020}
+		\begin{itemise}
+			\item Took a year out following bereavement.
+		\end{itemise}
+		% MChem
+		\xp{MChem Chemistry}{Durham University}{2014 - 2015}
+		\begin{itemise}
+			\item Switched course after year one.
+		\end{itemise}
+		% A Levels
+		\xp{A Levels}{Bournemouth Grammar School}{2013 - 2014}
+		\begin{itemise}
+			\item A* Chemistry, A Maths, A Physics, A German.
+		\end{itemise}
+		
+		% ACHIEVEMENTS
+		\section{Achievements}
+		\begin{itemise}[1em][-0.25em][0em]
+			\item Launched first ever Durham Yule Ball with a budget of over £3000, which has been nominated for best student event and commended by the leading student newspaper.
+			\hfill \href{https://www.palatinate.org.uk/things-you-need-to-do-in-durham-before-graduating/}{\faExternalLink}
+			\item Founded the Durham Circus Society.
+			\item 2nd place in the Athena Swan Level 1 Essay, entitled \emph{Why are there fewer women in engineering?}.
+			\hfill \href{https://www.dur.ac.uk/experience/news/?itemno=27469}{\faExternalLink}
+			\item Graphic design for Durham Juggling Convention marketing.
+			\item Grade 8 Saxophone, grade 7 Clarinet and grade 3 piano.
+			\item Level 2 Certification in Lean Organisational Management Techniques.
+		\end{itemise}
+	\end{minipage}
+\end{document}
