@@ -35,6 +35,12 @@ aside {
     max-width: 200px;
     margin-top: 10px;
     margin-bottom: 25px;
+    -webkit-transition: all 0.6s ease;
+    transition: all 0.3s ease;
+}
+.profile:hover {
+    -webkit-transform: scale(1.1, 1.1);
+    transform: scale(1.1, 1.1);
 }
 .contact {
     margin: 0;
@@ -46,7 +52,7 @@ aside {
     display: inline-block;
     padding: 18px;
 }
-.icon{
+.icon {
     display: inline-block;
     width: 1em;
     height: 1em;
@@ -57,7 +63,7 @@ aside {
     font-size: 24px;
     vertical-align: top;
 }
-.icon:hover{
+.icon:hover {
     -webkit-transform: scale(1.5, 1.5);
     transform: scale(1.5, 1.5);
 }
@@ -67,13 +73,13 @@ aside {
     background-color: rgba(255,255,255,0.09); /* White transparent overlay */
     border-radius: 10px;
     overflow: hidden;
-    -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    -webkit-transition: all 0.6s ease;
+    transition: all 0.3s ease;
 }
 .portfolio:hover {
-    background-color: rgba(255,255,255,0.16); /* White transparent overlay */
     -webkit-transform: scale(1.02, 1.02);
     transform: scale(1.02, 1.02);
+    background-color: rgba(255,255,255,0.16); /* White transparent overlay */
 }
 .img-cover {
     width: 100%;
@@ -99,7 +105,7 @@ aside {
 .references{
     font-size: 90%;
 }
-.references a{
+.references a {
     color: inherit;
 }
 .ref_link {
