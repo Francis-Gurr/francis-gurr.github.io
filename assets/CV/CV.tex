@@ -12,6 +12,11 @@
 \usepackage{fontawesome}
 \renewcommand{\baselinestretch}{1.05}
 
+% Semi bold font
+\newcommand{\textsb}[1]{
+	\fontseries{sb}\selectfont #1 \normalfont
+}
+
 % Colour Pallete
 \usepackage{xcolor}
 \definecolor{text_color}{HTML}{121212} % Rich Black FOGRA 39
@@ -192,12 +197,12 @@
     \xp{Pathfinding Visualiser}{}{2021 - Ongoing}
 		\begin{itemise}
       \item Currently working on a full stack web application to visually depict pathfinding algorithms in action with real world map data.
-      \item Skills used: Javascript, React, Express.js, Node.js, MySQL.
+      \item \textsb{Skills used:} Javascript, React, Express.js, Node.js, MySQL.
 		\end{itemise}
 		    \xp{Sudoku Solver}{}{Summer 2017}
 		\begin{itemise}
       \item Created a JavaFX app to solve Sudoku problems using a recursive backtracking algorithm.
-      \item Skills used: Java, XML.
+      \item \textsb{Skills used:} Java, XML.
 		\end{itemise}
 	\end{minipage}
 \end{document}
