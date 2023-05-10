@@ -32,14 +32,14 @@
 
 % Experience page headings \xp{Name}{Place}{Date}
 \newcommand{\xp}[3]{
-	\vspace{0.25em}
-	\textbf{\large#1} \quad \emph{\large#2} \hfill \textbf{\large#3}
+	\vspace{0.5em}
+	\textbf{\Large#1} \quad \emph{\large#2} \hfill \textbf{\large#3}
 }
 
 % Skill boxes
 \usepackage[skins]{tcolorbox}
 \newcommand{\skill}[1]{
-	\tcbox[skin=enhanced, nobeforeafter, colback=bg_color, colframe=bg_color, coltext=text_color, size=fbox, height=15pt]{\footnotesize#1}
+	\tcbox[skin=enhanced, nobeforeafter, colback=bg_color, colframe=bg_color, coltext=text_color, size=fbox, height=1.25em]{\small#1}
 }
 
 % Custom itemise
@@ -75,61 +75,55 @@
 
 			% SUMMARY
 			\section{Summary}
-			I am a recent Electronic Engineering (MEng) graduate from  Durham University.
+			%As a Software Engineer at Pendo, I developed the new Roadmap tool from scratch, acted as a team tech lead, acquired expertise in various technologies, and contributed to the office culture. I completed a Master's degree at Durham University, utilising machine learning to detect vehicle speed, and completed internships with Q-Free and the Durham University Maths Department.
+			I have two years of experience as a software engineer, with a primary focus on front-end development, although my interest also extends to full-stack.
+			
+			I am passionate about continuous learning and enjoy working in challenging environments that facilitate personal and professional growth.
 
-			I enjoy solving complex problems both independently and as part of a team.
-			I am a fast learner and enjoy widening my skill set by challenging myself with personal projects.
-			I have experience working on large long term projects and can work well in a range of team dynamics.
-			Whilst completing projects I am highly motivated, organised and strive to ensure all my work is of a high standard.
-			These attributes have led me to receive a first in every programming assignment throughout my degree.
+			Working on personal programming projects is not only a hobby for me, but also an opportunity to expand my skillset and experiment with new technologies.
+			While I have some examples of my work on my website and GitHub, many of my projects are small experiments that I enjoy tinkering with on my home server.
 
-			In my spare time I am a keen rock climber, mountain unicyclist and occasional juggler.
+			When I am not at the computer, you can find me rock climbing, mountain unicycling and occasionally juggling.
+
+			\section{Education}
+			\textbf{Master of Engineering}
+			
+			\textbf{Electronic Engineering}
+			
+			Durham University
+
+			2015 - 2020
 
 			% SKILLS
 			\section{Skills}
-			\emph{Most experience with:\vspace{0.25em}}\\
-			\skill{Java}
-			\skill{Python}
-			\skill{C}
+			Lots of experience with:\vspace{0.25em}\\
 			\skill{Javascript}
-			\skill{MatLab}
+			\skill{Vue.js}
+			\skill{HTML}
+			\skill{CSS}
 
 			\vspace{0.25em}
 
-			\skill{Electronics}
-			\skill{Linux}
-			\skill{LaTeX}
-			\skill{German}
+			\skill{Jest}
+			\skill{Cypress}
+			\skill{Python}
+			\skill{Git}
+			
 			\vspace{0.5em}
-			\\
-			\emph{Some experience with:\vspace{0.2em}}\\
+			Some experience with:\vspace{0.25em}\\
+			\skill{Go}
+			\skill{Java}
+			\skill{Ruby}
+			\skill{C}
 			\skill{C++}
-			\skill{React}
-			\skill{Express.js}
-			\skill{Node.js}
-
-			\vspace{0.25em}
-
-			\skill{MySQL}
-			\skill{PHP}
-			\skill{Graphic Design}
-
-			% REFERENCES
-			\section{References}
-			\textbf{Dr Stefano Giani}
-			\begin{itemise}[2em][-0.25em][-0.5em][0em]
-				\item[\faBriefcase] Assistant Professor\\ \emph{Durham University}
-				\item[\faEnvelope] \href{mailto:stefano.giani@durham.ac.uk}{stefano.giani@durham.ac.uk}
-			\end{itemise}
-
-			\textbf{Colin Reekie}
-			\begin{itemise}[2em][-0.25em][-0.5em][0em]
-				\item[\faBriefcase] Head of Development\\ \emph{Q-Free ASA}
-				\item[\faEnvelope] \href{mailto:colin.reekie@q-free.com}{colin.reekie@q-free.com}
-			\end{itemise}
-			\vfill
-			\vspace{2.5em}
+			\skill{GCP}
+			
+			\vspace{0.5em}
+			Languages:\vspace{0.25em}\\
+			\skill{English}
+			\skill{German}
 		\end{minipage}
+	\vspace{8em}
 	\end{minipage}
 }
 % Spacing
@@ -140,74 +134,52 @@
 
 	% EXPERIENCE
 	\section{Experience}
-	% Final Year Project
-	\xp{Masters Project - 1st Class (80\%)}{Durham University}{2019 - 2020}
-	\begin{itemise}
+	\vspace{0.5em}
+	% Pendo
+	\xp{Software Engineer}{Pendo}{Aug 2022 - Present}
 
-		%Q-Free, who are developing a vehicle classification system using video images.
-		%This project investigated the use of video cameras to determine the speed of detected vehicles.
-		%This could add another unique product to the ITS market, providing clients with the flexibility to choose the data they require.
-		\item Q-Free, a global leader in intelligent transportation systems (ITS), offered me the opportunity to begin developing a new product for my masters project.
-		\item My project proposed the use of video images to determine the speed of detected vehicles. As a non-intrusive alternative to current ITS and infomobility systems, the aim was to add a unique product to the market.
-		\item I used a convolutional neural network for object detection with an accuracy of 98\% mAP and a Kalman filter was used to track the vehicles.
-		\item I developed Python software to calibrate the camera using road markings, and used C++ to calculate the vehicle speeds.
-		\item The resulting software was able to provide vehicle speeds in real-time from road-side camera footage.
+	\xp{Associate Software Engineer}{}{Jun 2021 - Jul 2022}
+	\begin{itemise}
+		\item    Developed and implemented a roadmapping tool from scratch
+		\item    Acquired expertise in various technologies, including JavaScript, Vue.js, and testing using Jest and Cypress
+		\item    Assumed the role of team tech lead, overseeing project development and ensuring successful outcomes while the regular tech lead was on paternity leave earlier this year
+		\item    Mentored associate developers and onboarded new team members
+		\item    Delivered presentations on various topics, showcasing in-depth knowledge of the subject matter and engaging audiences effectively
+		\item    Recipient of the most Pank awards in the category "Win Together" in Q1, FY24 (Pank awards are Pendo's peer recognition program)
+		\item    Assisted in organising an internal product and engineering conference
+		\item    Participated in customer support calls
+		\item    Contributed to building the office culture by starting a weekly climbing club
+	\end{itemise}
+	% Final Year Project
+	\xp{Masters Project - 1st Class (80\%)}{Durham University}{2020}
+	\begin{itemise}
+		\item Utilized machine learning to detect and provide real-time vehicle speed from roadside camera footage
+		\item Developed Python software to calibrate the camera using road markings and used C++ to calculate vehicle speeds
+		\item The results were published in a paper in the International Journal of Intelligent Transportation Systems Research \textsb{20}(2022) under the title "Camera-Based System for the Automatic Detection of Vehicle Axle Count and Speed Using Convolutional Neural Networks", \href{https://doi.org/10.1007/s13177-022-00325-1}{DOI: 10.1007/s13177-022-00325-1 \faExternalLink}
+		\item The project was sponsored by Q-Free and aimed to add a unique product to the market with a non-intrusive alternative to current ITS and infomobility systems
+		
 		\hfill
-		\href{https://www.francisgurr.com/pages/masters_project/masters_project.html}{\faLink}
+		\href{https://www.francisgurr.com/pages/masters_project/masters_project.html}{\small See more on my website \faExternalLink}
 	\end{itemise}
 	% Internship
-	\xp{R\&D Internship}{Q-Free ASA, Bristol}{Jul 2019 - Sep 2019}
+	\xp{R\&D Internship}{Q-Free}{Jul 2019 - Sep 2019}
 	\begin{itemise}
-		\item During my third year design project, I designed an innovative prototype for a non-intrusive roadside detection system to count and classify vehicles.
-		\item Q-Free awarded me the opportunity to develop a working prototype of my design during a summer internship.
-		\item I developed software in C to process data from LiDAR and radar sensors, and used Python to generate graphical 2D side profiles of each vehicle in real time.
+		\item Designed an innovative prototype for a non-intrusive roadside detection system to count and classify vehicles during my third-year design project
+		\item Awarded a summer internship by Q-Free to develop a working prototype of my design
+		\item Developed software in C to process LiDAR and radar sensor data and used Python to generate real-time 2D side profiles of each vehicle
+
 		\hfill
-		\href{https://www.francisgurr.com/pages/qfree_internship/qfree_internship.html}{\faLink}
+		\href{https://www.francisgurr.com/pages/qfree_internship/qfree_internship.html}{\small See more on my website \faExternalLink}
 	\end{itemise}
 	% Co-author
-	\xp{Internship}{Durham University, Maths Dept.}{Jun 2018 - Feb 2019}
+	\xp{Research Internship}{Durham University}{Jun 2018 - Feb 2019}
 	\begin{itemise}
-		\item Co-authored ancillary software for an academic paper entitled \emph{Quartic Graphs that are Bakry-Émery Curvature Sharp}, published in Discrete Mathematics \textsb{343}(3), \href{https://arxiv.org/abs/1902.10665}{DOI: 10.1016/j.disc.2019.111767}.
-		\item I developed a computer classification algorithm in Python to recursively generate all unique radius two local configurations of quartic graphs.
-		\item These results were the basis of the main theorem in an academic research paper.
-		\hfill
-		\href{https://www.francisgurr.com/pages/summer_project/summer_project.html}{\faLink}
-	\end{itemise}
+		\item Summer internship with the Department of Maths and Computer Science
+		\item Developed a classification algorithm in Python to recursively generate unique radius two local configurations of quartic graphs
+		\item The results formed the basis of the main theorem in an academic research paper "Quartic Graphs that are Bakry-Émery Curvature Sharp", published in Discrete Mathematics \textsb{343}(3), \href{https://doi.org/10.1016/j.disc.2019.111767}{DOI: 10.1016/j.disc.2019.111767 \faExternalLink}
 
-	% EDUCATION
-	\vspace{-2em}
-	\section{Education}
-	% MEng
-	\xp{MEng Electronic Engineering - 2:1}{Durham University}{2015 - 2020}
-	\begin{itemise}
-		\item Took a year out following bereavement as an exam only student.
-	\end{itemise}
-	% MChem
-	\xp{MChem Chemistry}{Durham University}{2014 - 2015}
-	\begin{itemise}
-		\item Switched course after year one.
-	\end{itemise}
-	% A Levels
-	\xp{A Levels}{Bournemouth Grammar School}{2013 - 2014}
-	\begin{itemise}
-		\item A* Chemistry, A Maths, A Physics, A German.
-	\end{itemise}
-
-	% ACHIEVEMENTS
-	\section{Personal Projects}
-	\xp{Pathfinding Visualiser}{}{2021 - Ongoing}
-	\begin{itemise}
-		\item Currently working on a full stack web application to visually depict pathfinding algorithms in action with real world map data.
-		\item \textsb{Skills used:} Javascript, React, Express.js, Node.js, MySQL.
 		\hfill
-		\href{https://github.com/Francis-Gurr/Pathfinding-Visualiser}{\faLink}
-	\end{itemise}
-	\xp{Sudoku Solver}{}{Summer 2017}
-	\begin{itemise}
-		\item Created a JavaFX app to solve Sudoku problems using a recursive backtracking algorithm.
-		\item \textsb{Skills used:} Java, XML.
-		\hfill
-		\href{https://github.com/Francis-Gurr/Sudoku-Solver}{\faLink}
+		\href{https://www.francisgurr.com/pages/summer_project/summer_project.html}{\small See more on my website \faExternalLink}
 	\end{itemise}
 \end{minipage}
 \end{document}
