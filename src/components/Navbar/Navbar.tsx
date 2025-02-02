@@ -4,7 +4,7 @@ const Navbar: React.FC = () => {
   return (
     <div className="bg-main border-2 h-16 flex items-center p-8">
       <Link to="/" className="font-heading text-xl transition-transform hover:scale-110">
-        Francis
+        Home
       </Link>
       <div className="flex grow justify-end gap-8">
         <Link to="/projects" className="font-heading text-l transition-transform hover:scale-110">

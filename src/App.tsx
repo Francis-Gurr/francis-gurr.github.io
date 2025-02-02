@@ -1,20 +1,23 @@
 import { Navbar } from "@/components/Navbar/Navbar"
-import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
+import { ScrollArea } from "@/components/ui/ScrollArea"
 import { Contact } from '@/pages/Contact/Contact'
 import { Home } from '@/pages/Home/Home'
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
 
 const App: React.FC = () => {
   return (
     <Router>
-      <div className="py-16 mx-auto w-3/4">
-        <div className="shadow-shadow">
+      <div className="h-full py-16 mx-auto w-3/4">
+        <div className="h-full flex flex-col shadow-shadow">
           <Navbar />
-          <div className='border-2 flex bg-white bg-[radial-gradient(#80808080_1px,transparent_1px)] [background-size:16px_16px]'>
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/contact" element={<Contact />} />
-            </Routes>
-          </div>
+          <ScrollArea className='grow border-2 bg-white bg-[radial-gradient(#80808080_1px,transparent_1px)] [background-size:16px_16px]'>
+            <div className="p-16 mx-auto max-w-7xl">
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/contact" element={<Contact />} />
+              </Routes>
+            </div>
+          </ScrollArea>
         </div>
       </div>
     </Router>
