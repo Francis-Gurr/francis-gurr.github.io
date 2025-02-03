@@ -1,8 +1,9 @@
 import profilePicture from '@/assets/profile-picture.jpg'
+import { ContactForm } from '@/components/ContactForm/ContactForm'
 import { ExternalLink } from '@/components/ExternalLink/ExternalLink'
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/Avatar'
-import { Button } from '@/components/ui/Button'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card'
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
+import { Button } from '@/components/ui/button'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import {
   GithubIcon,
   HandIcon,
@@ -19,7 +20,9 @@ const Home: React.FC = () => {
           <AvatarFallback></AvatarFallback>
         </Avatar>
         <div className='flex gap-4 w-full justify-center'>
-          <a href="mailto:francis.gurr@gmail.com"><Button><MailIcon /></Button></a>
+          <ContactForm>
+            <Button><MailIcon /></Button>
+          </ContactForm>
           <a href="https://www.linkedin.com/in/francis-gurr/"><Button><LinkedinIcon /></Button></a>
           <a href="https://github.com/Francis-Gurr"><Button><GithubIcon /></Button></a>
         </div>

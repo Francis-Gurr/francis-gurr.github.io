@@ -1,12 +1,12 @@
 import { ExternalLinkIcon } from "lucide-react";
 
-interface StyledLinkProps {
+interface ExternalLinkProps {
   href: string;
   children: React.ReactNode;
   newTab?: boolean;
 }
 
-const ExternalLink: React.FC<StyledLinkProps> = ({ href, children, newTab = false }) => {
+const ExternalLink: React.FC<ExternalLinkProps> = ({ href, children, newTab = false }) => {
   return (
     <a
       className="underline text-teal-700 decoration-teal-700 inline-flex items-center gap-1 hover:text-teal-900 hover:decoration-teal-900 hover:decoration-2"

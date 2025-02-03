@@ -1,5 +1,5 @@
 import { Navbar } from "@/components/Navbar/Navbar"
-import { ScrollArea } from "@/components/ui/ScrollArea"
+import { ScrollArea } from "@/components/ui/scroll-area"
 import { Contact } from '@/pages/Contact/Contact'
 import { Home } from '@/pages/Home/Home'
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
