@@ -1,8 +1,10 @@
 import { Navbar } from "@/components/Navbar/Navbar"
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { Contact } from '@/pages/Contact/Contact'
+import { Projects } from '@/pages/Projects/Projects'
 import { Home } from '@/pages/Home/Home'
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
+import { Toaster } from "@/components/ui/toaster"
 
 const App: React.FC = () => {
   return (
@@ -14,11 +16,13 @@ const App: React.FC = () => {
             <div className="p-16 mx-auto max-w-7xl">
               <Routes>
                 <Route path="/" element={<Home />} />
+                <Route path="/projects" element={<Projects />} />
                 <Route path="/contact" element={<Contact />} />
               </Routes>
             </div>
           </ScrollArea>
         </div>
+        <Toaster />
       </div>
     </Router>
   )

@@ -9,6 +9,7 @@ import {
   HandIcon,
   LinkedinIcon,
   MailIcon,
+  SmileIcon,
 } from 'lucide-react'
 
 const Home: React.FC = () => {
@@ -17,7 +18,7 @@ const Home: React.FC = () => {
       <div>
         <Avatar className='shadow-shadow mb-8 h-48 w-48'>
           <AvatarImage src={profilePicture} />
-          <AvatarFallback></AvatarFallback>
+          <AvatarFallback><SmileIcon className='h-32 w-32' /></AvatarFallback>
         </Avatar>
         <div className='flex gap-4 w-full justify-center'>
           <ContactForm>
