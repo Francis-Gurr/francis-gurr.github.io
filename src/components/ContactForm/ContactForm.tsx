@@ -1,4 +1,5 @@
-import { Button } from '@/components/ui/button'
+import { ExternalLink } from '@/components/ExternalLink/ExternalLink';
+import { Button } from '@/components/ui/button';
 import {
   Dialog,
   DialogContent,
@@ -7,17 +8,16 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from '@/components/ui/dialog'
-import { Input } from '@/components/ui/input'
-import { ExternalLink } from '@/components/ExternalLink/ExternalLink'
-import { AlertTriangle, LinkedinIcon, SendIcon, XIcon } from 'lucide-react';
-import { z } from "zod";
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form";
+} from '@/components/ui/dialog';
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import { Input } from '@/components/ui/input';
 import { Textarea } from "@/components/ui/textarea";
+import { toast } from '@/hooks/use-toast';
+import { zodResolver } from "@hookform/resolvers/zod";
+import { SendIcon } from 'lucide-react';
 import { useState } from 'react';
-import { Alert, AlertDescription, AlertTitle } from '../ui/alert';
+import { useForm } from "react-hook-form";
+import { z } from "zod";
 
 interface ContactFormProps {
   children: React.ReactNode;
@@ -33,8 +33,6 @@ const formSchema = z.object({
 const ContactForm: React.FC<ContactFormProps> = ({ children }) => {
   const [isDialogOpen, setIsDialogOpen] = useState<boolean>(false);
   const [isSending, setIsSending] = useState<boolean>(false);
-  const [isSuccessAlertVisible, setIsSuccessAlertVisible] = useState<boolean>(false);
-  const [isErrorAlertVisible, setIsErrorAlertVisible] = useState<boolean>(false);
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -49,6 +47,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ children }) => {
   async function onSubmit(values: z.infer<typeof formSchema>) {
     setIsSending(true);
 
+
     try {
       const response = await fetch("https://formspree.io/f/xbldyznz", {
         method: "POST",
@@ -59,12 +58,19 @@ const ContactForm: React.FC<ContactFormProps> = ({ children }) => {
       if (response.ok) {
         form.reset(); // Clear the form after success
         setIsDialogOpen(false)
-        setIsSuccessAlertVisible(true)
+        toast({
+          title: "Message sent!",
+          description: "I'll get back to you soon.",
+          variant: 'success'
+        })
       } else {
-        setIsErrorAlertVisible(true)
+        throw new Error();
       }
     } catch {
-      setIsErrorAlertVisible(true)
+      toast({
+        variant: 'error',
+        description: "Please try again or contact me using a different method.",
+      })
     } finally {
       setIsSending(false)
     }
@@ -72,20 +78,6 @@ const ContactForm: React.FC<ContactFormProps> = ({ children }) => {
 
   return (
     <>
-      <Alert visible={isSuccessAlertVisible} setVisible={setIsSuccessAlertVisible}>
-        <AlertTitle>Sent</AlertTitle>
-        <AlertDescription>
-          Message sent successfully, I'll get back to you soon!
-        </AlertDescription>
-      </Alert>
-
-      <Alert visible={isErrorAlertVisible} setVisible={setIsErrorAlertVisible} variant="error">
-        <AlertTitle>Error</AlertTitle>
-        <AlertDescription>
-          There was an error sending your message. Please try again or contact me using a different method.
-        </AlertDescription>
-      </Alert>
-
       <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
         <DialogTrigger asChild>
           {children}
@@ -168,4 +160,4 @@ Awaiting your wisdom, Arthur." {...field} rows={6} />
   )
 }
 
-export { ContactForm }
+export { ContactForm };
